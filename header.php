@@ -37,7 +37,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h1>
-				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/yuppy/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
+				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 			</h1>
 		</div>
 	</div>
