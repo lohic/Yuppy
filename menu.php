@@ -48,4 +48,7 @@
 		</div>
 	<!--</div>-->
 </nav>
+
+<!-- WPML -->
+<?php //do_action('icl_language_selector'); ?>
 <!-- end MENU.PHP -->
