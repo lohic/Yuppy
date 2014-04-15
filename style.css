@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*
+Theme Name: YUPPY
+Theme URI: http://yuppy.fr
+Description: Thème pour Yuppy.
+Version: 1.0
+Author: Formidable Studio - http://www.formidable-studio.net
+ 
+Creation Theme by Formidable Studio
+ 
+*/
+
+body{
+	font-family: "ff-dagny-web-pro", sans-serif;
+}
+
+
+.container{
+	background: white;
+}
+
+.header{
+	background: black;
+}
+
+.footer{
+	background: #444;
+}
+
+.navigation{
+	padding-left:0;
+	padding-right:0;
+}
+
+.navbar-default{
+	background: none;
+	border-width: 0;
+	border-top-width: 1px;
+	border-radius: 0;
+	margin-bottom: 0;
+	min-height: 30px;
+}
+
+
+.navbar-nav>li>a{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:white;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	background-color: transparent;
+	border-bottom: solid 4px #00CCFF;
+	color: #00CCFF;
+}
+
+.navbar-form{
+	padding: 0px 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.navbar-form .form-control{
+	padding: 0px 6px;
+	background: black;
+}
+
+.form-control{
+	border-radius: 0;
+	border-color: transparent;
+	color:white;
+}
+
+.form-group .btn{
+	border-radius: 0;
+}
+
+.btn-default{
+	background: black;
+	border-color: transparent;
+	color: white;
+}
+/* ajouts Sophie */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "omnes-pro", sans-serif;
+	font-weight: 300; /* ... ne marche pas */
+}
+
+.invisible{
+	display: none;
+}
+
+.lead{ /* ... ne marche pas */
+	color: #FFF;
+	font-style: italic;
+
+}
+a, a:hover{ /* ... ne marche pas */
+	color: #00CCFF;
+}
+
+}
+/* FIN ajouts Sophie */
+
+/* Extra Small */
+@media(max-width:767px){
+
+}
+
+/* Small */
+@media(min-width:768px) and (max-width:991px){
+	.navbar-collapse{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px){
+	.navbar-collapse{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
+
+/* Large */
+@media(min-width:1200px){
+	.navbar-collapse{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
