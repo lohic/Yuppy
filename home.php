@@ -22,7 +22,8 @@ get_template_part('bootstrap','carousel')
 <div class="row">
 	<div class="col-6 col-sm-6 col-lg-4">
 		<h2>Yuppy Yap</h2>
-		<?php $query = new WP_Query( array( 'category_name' => 'yuppy-yap', 'posts_per_page'=>1 ) );
+		<!-- yuppy-yap -->
+		<?php $query = new WP_Query( array( 'category_name' => 'concerts', 'posts_per_page'=>1 ) );
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
@@ -58,7 +59,6 @@ get_template_part('bootstrap','carousel')
 			while($query->have_posts()) : $query->the_post();?>
 		<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
 		<?php
-
 
 		//the_excerpt()
 
