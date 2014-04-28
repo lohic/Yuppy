@@ -98,6 +98,25 @@ if( ! function_exists (my_register_post_types)) {
 			)
 		);
 
+		register_post_type(
+			'discographie',
+			array(
+				'label' => __('Discographies'),
+				'singular_label' => __('Discographie'),
+				'public' => true,
+				'show_ui' => true,
+				//'show_in_menu' => false,
+				//'menu_icon'=> get_bloginfo('template_directory') .'/images/favicon.png',
+				'show_in_nav_menus'=> false,
+				'capability_type' => 'post',
+				'rewrite' => array("slug" => "discographie"),
+				'hierarchical' => false,
+				'query_var' => false,
+				'supports' => array('title','editor','excerpt','thumbnail'),
+				'menu_position' => 21,
+			)
+		);
+
 
 		register_post_type(
 			'groupe',
@@ -136,7 +155,7 @@ if( ! function_exists (my_register_taxonomies)) {
 			'menu_name' 		=> __( 'Genres' ),
 		); 
 	
-		register_taxonomy('genre','album',array(
+		register_taxonomy('genre','discographie',array(
 			'hierarchical' 		=> false,
 			'labels' 			=> $labels,
 			'show_ui' 			=> true,
@@ -146,22 +165,50 @@ if( ! function_exists (my_register_taxonomies)) {
 			'rewrite' 			=> array( 'slug' => 'genre' ),
 		));
 
+
 		/*$labels = array(
-			'name' => _x( 'Médias', 'taxonomy general name' ),
-			'singular_name' => _x( 'Média', 'taxonomy singular name' ),
-			'parent_item' => null,
+			'name' 				=> _x( 'Albums', 'taxonomy general name' ),
+			'singular_name' 	=> _x( 'Album',  'taxonomy singular name' ),
+			'search_items'      => __( 'Rechercher un album' ),
+			'all_items'			=> __( 'Tous les albums' ),
+			'parent_item' 		=> null,
 			'parent_item_colon' => null,
-			//'show_ui' => false,
-			'menu_name' => __( 'Médias' ),
+			//'show_ui' 		=> false,
+			'menu_name' 		=> __( 'Albums' ),
 		); 
-	
-		register_taxonomy('media','projet',array(
-			'hierarchical' => false,
-			'labels' => $labels,
-			'show_ui' => true,
-			'query_var' => true,
+
+
+		register_taxonomy('album','post',array(
+			'hierarchical' 		=> false,
+			'labels' 			=> $labels,
+			'show_ui' 			=> true,
+			'query_var' 		=> true,
 			'show_in_nav_menus' => true,
-			'rewrite' => array( 'slug' => 'media' ),
+			'show_admin_column' => true,
+			'rewrite' 			=> array( 'slug' => 'album' ),
+		));
+
+
+		$labels = array(
+			'name' 				=> _x( 'Labels', 'taxonomy general name' ),
+			'singular_name' 	=> _x( 'Label',  'taxonomy singular name' ),
+			'search_items'      => __( 'Rechercher un label' ),
+			'all_items'			=> __( 'Tous les labels' ),
+			'parent_item' 		=> null,
+			'parent_item_colon' => null,
+			//'show_ui' 		=> false,
+			'menu_name' 		=> __( 'Labels' ),
+		); 
+
+
+		register_taxonomy('label','post',array(
+			'hierarchical' 		=> false,
+			'labels' 			=> $labels,
+			'show_ui' 			=> true,
+			'query_var' 		=> true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'rewrite' 			=> array( 'slug' => 'label' ),
 		));*/
 	}
 }
