@@ -80,25 +80,6 @@ if( ! function_exists (my_register_post_types)) {
 		);	
 
 		register_post_type(
-			'album',
-			array(
-				'label' => __('Albums'),
-				'singular_label' => __('Album'),
-				'public' => true,
-				'show_ui' => true,
-				//'show_in_menu' => false,
-				//'menu_icon'=> get_bloginfo('template_directory') .'/images/favicon.png',
-				'show_in_nav_menus'=> false,
-				'capability_type' => 'post',
-				'rewrite' => array("slug" => "album"),
-				'hierarchical' => false,
-				'query_var' => false,
-				'supports' => array('title','editor','excerpt','thumbnail'),
-				'menu_position' => 21,
-			)
-		);
-
-		register_post_type(
 			'discographie',
 			array(
 				'label' => __('Discographies'),
@@ -166,7 +147,7 @@ if( ! function_exists (my_register_taxonomies)) {
 		));
 
 
-		/*$labels = array(
+		$labels = array(
 			'name' 				=> _x( 'Albums', 'taxonomy general name' ),
 			'singular_name' 	=> _x( 'Album',  'taxonomy singular name' ),
 			'search_items'      => __( 'Rechercher un album' ),
@@ -209,7 +190,7 @@ if( ! function_exists (my_register_taxonomies)) {
 			'show_in_nav_menus' => true,
 			'show_admin_column' => true,
 			'rewrite' 			=> array( 'slug' => 'label' ),
-		));*/
+		));
 	}
 }
 
