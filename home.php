@@ -23,7 +23,7 @@ get_template_part('bootstrap','carousel')
 	<div class="col-6 col-sm-6 col-lg-4">
 		<h2>Yuppy Yap</h2>
 		<!-- yuppy-yap -->
-		<?php $query = new WP_Query( array( 'category_name' => 'concerts', 'posts_per_page'=>1 ) );
+		<?php $query = new WP_Query( array( 'category_name' => 'yuppy-yap', 'posts_per_page'=>1 ) );
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
