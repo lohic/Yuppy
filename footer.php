@@ -27,11 +27,6 @@
 
 <?php wp_footer(); ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="<?php bloginfo( 'template_url' ); ?>/js/bootstrap.min.js"></script>
-
 
 <!--<?php echo get_num_queries(); ?> requêtes. <?php timer_stop(1); ?> secondes.-->
 </body>

@@ -204,3 +204,9 @@ add_action( 'init', 'my_register_taxonomies' );
 // on déclare les connexions entre différents types de posts
 if ( function_exists('my_connection_types') )
 add_action( 'p2p_init', 'my_connection_types' );
+
+
+wp_enqueue_script( 'jquery' );
+wp_enqueue_script( 'bootstrap',      get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.1.1', true );
+
+
