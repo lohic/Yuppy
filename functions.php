@@ -212,7 +212,12 @@ wp_enqueue_script( 'jquery' );
 wp_enqueue_script( 'bootstrap',      get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.1.1', true );
 
 
-// get taxonomies terms links
+/**
+ * get taxonomies terms links
+ * @param  string $glue      [description]
+ * @param  [type] $taxonomie [description]
+ * @return [type]            [description]
+ */
 function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 	// get post by post id
 	$post = get_post( $post->ID );
@@ -260,3 +265,5 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 
 	return implode($glue, $out );
 }
+
+
