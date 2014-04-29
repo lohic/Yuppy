@@ -34,7 +34,7 @@ get_template_part('bootstrap','carousel')
 			<?php the_post_thumbnail( 'home' ); ?>
 			</a>
 		<?php } ?>
-		<h3><a href="<?php the_permalink();?>"><?php the_title()?> <span class="fleche">></span> <span><?php _e("Lire l'interview");?></span></a></h3>
+		<h3><a href="<?php the_permalink();?>"><?php the_title()?> <span class="fleche"></span> <span><?php _e("Lire l'interview");?></span></a></h3>
 		<p class="extrait">« <?php
 		$my_excerpt = get_the_excerpt();
 		if ( $my_excerpt != '' ) {

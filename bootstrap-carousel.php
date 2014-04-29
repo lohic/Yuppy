@@ -33,7 +33,7 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 			<div class="container">
 				<div class="carousel-caption">
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<p><a href="<?php the_permalink(); ?>"><span class="fleche">></span> <?php _e("Lire la suite") ?></a></p>
+					<p><a href="<?php the_permalink(); ?>"><span class="fleche"></span> <?php _e("Lire la suite") ?></a></p>
 				</div>
 			</div>
 		</div>
@@ -42,8 +42,8 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 		endif;
 		endwhile; ?>
 	</div>
-	<a class="left carousel-control" href="#carousel-home" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	<a class="right carousel-control" href="#carousel-home" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	<!--<a class="left carousel-control" href="#carousel-home" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#carousel-home" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>-->
 </div>
 <?php endif;
 wp_reset_postdata(); ?>
