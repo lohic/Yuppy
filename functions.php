@@ -210,6 +210,7 @@ add_action( 'p2p_init', 'my_connection_types' );
 
 wp_enqueue_script( 'jquery' );
 wp_enqueue_script( 'bootstrap',      get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.1.1', true );
+wp_enqueue_script( 'yuppy',     	 get_template_directory_uri() . '/js/script.js', array('jquery','bootstrap'),'1.0.0', true );
 
 
 /**
