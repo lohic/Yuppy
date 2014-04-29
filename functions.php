@@ -3,7 +3,7 @@
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'mini', 80, 80, true ); 
-add_image_size( 'small', 280, 175, true ); 
+add_image_size( 'home', 280, 175, true ); 
 add_image_size( 'medium', 900, 500, true ); 
 
 
@@ -212,3 +212,51 @@ wp_enqueue_script( 'jquery' );
 wp_enqueue_script( 'bootstrap',      get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.1.1', true );
 
 
+// get taxonomies terms links
+function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
+	// get post by post id
+	$post = get_post( $post->ID );
+
+	// get post type by post
+	$post_type = $post->post_type;
+
+	// get post type taxonomies
+	$taxonomies = get_object_taxonomies( $post_type, 'objects' );
+
+	$out = array();
+	if(empty($taxonomie)){
+		foreach ( $taxonomies as $taxonomy_slug => $taxonomy ){
+
+			// get the terms related to post
+			$terms = get_the_terms( $post->ID, $taxonomy_slug );
+
+			if ( !empty( $terms ) ) {
+				//$out[] = "<h2>" . $taxonomy->label . "</h2>\n<ul>";
+				foreach ( $terms as $term ) {
+					$out[] =
+					'<a href="'
+					.get_term_link( $term->slug, $taxonomy_slug ) .'">'
+					.$term->name
+					."</a>\n";
+				}
+				//$out[] = "</ul>\n";
+			}
+		}
+	}else{
+		$terms = get_the_terms( $post->ID, $taxonomie );
+
+		if ( !empty( $terms ) ) {
+			//$out[] = "<h2>" . $taxonomy->label . "</h2>\n<ul>";
+			foreach ( $terms as $term ) {
+				$out[] =
+				'<a href="'
+				.get_term_link( $term->slug, $taxonomie ) .'">'
+				.$term->name
+				."</a>\n";
+			}
+			//$out[] = "</ul>\n";
+		}
+	}
+
+	return implode($glue, $out );
+}
