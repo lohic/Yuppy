@@ -243,7 +243,7 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 					'<a href="'
 					.get_term_link( $term->slug, $taxonomy_slug ) .'">'
 					.$term->name
-					."</a>\n";
+					."</a>";
 				}
 				//$out[] = "</ul>\n";
 			}
@@ -258,7 +258,7 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 				'<a href="'
 				.get_term_link( $term->slug, $taxonomie ) .'">'
 				.$term->name
-				."</a>\n";
+				."</a>";
 			}
 			//$out[] = "</ul>\n";
 		}
