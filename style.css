@@ -10,6 +10,12 @@ Creation Theme by Formidable Studio
  
 */
 
+@font-face
+{
+	font-family: fleches;
+	src: url(font/sansation_light.woff);
+}
+
 body{
 	font-family: "ff-dagny-web-pro", sans-serif;
 }
@@ -104,8 +110,13 @@ a, a:hover{ /* ... ne marche pas */
 	color: #00CCFF;
 }
 
-}
 /* FIN ajouts Sophie */
+
+
+.fleche{
+	font-family: fleches;
+}
+
 
 /* Extra Small */
 @media(max-width:767px){
@@ -133,5 +144,51 @@ a, a:hover{ /* ... ne marche pas */
 	.navbar-collapse{
 		padding-right: 0px;
 		padding-left: 0px;
+	}
+
+
+	.carousel-indicators{
+		position: relative;
+		bottom: auto;
+		left: auto;
+		z-index: 15;
+		width: auto;
+		margin-left: auto;
+		margin-top:20px;
+		padding-left: 0;
+		list-style: none;
+		text-align: right;
+		margin-bottom:18px;
+	}
+
+	.carousel-indicators li{
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		margin: 0;
+		margin-left: 6px;
+		text-indent: -999px;
+		border: 0;
+		border-radius: 16px;
+		cursor: pointer;
+		background-color: #000;
+		padding: 0;
+	}
+
+	.carousel-indicators .active{
+		margin: 0;
+		margin-left: 6px;
+		margin-right: 0;
+		width: 14px;
+		height: 14px;
+		background-color: #00CCFF;
+		border: 0;
+	}
+
+	.carousel-control.left{
+		background-image: none;
+	}
+	.carousel-control.right{
+		background-image: none;
 	}
 }

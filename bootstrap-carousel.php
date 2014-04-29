@@ -18,7 +18,7 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 		<?php $i=0; 
 		while($sticky_query->have_posts()) : $sticky_query->the_post();
 		if(has_post_thumbnail()) :?>
-		<li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){ echo 'active'; } ?>"></li>
+		<li data-target="#carousel-home" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){ echo 'active'; } ?>"></li>
 		<?php
 		$i ++;
 		endif;
@@ -29,11 +29,11 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 		while($sticky_query->have_posts()) : $sticky_query->the_post();
 		if(has_post_thumbnail()) :?>
 		<div class="item<?php if($i == 0){ echo ' active'; } ?>">
-			<?php the_post_thumbnail( 'medium' ); ?> 
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 			<div class="container">
 				<div class="carousel-caption">
-					<h1><?php the_title(); ?></h1>
-					<p><a class="btn btn-lg btn-primary" href="<?php the_permalink(); ?>" role="button">Lire la suite</a></p>
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<p><a href="<?php the_permalink(); ?>"><span class="fleche">></span> <?php _e("Lire la suite") ?></a></p>
 				</div>
 			</div>
 		</div>
