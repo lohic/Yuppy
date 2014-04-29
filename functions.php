@@ -136,7 +136,7 @@ if( ! function_exists (my_register_taxonomies)) {
 			'menu_name' 		=> __( 'Genres' ),
 		); 
 	
-		register_taxonomy('genre','discographie',array(
+		register_taxonomy('genre',array('post', 'discographie'),array(
 			'hierarchical' 		=> false,
 			'labels' 			=> $labels,
 			'show_ui' 			=> true,
