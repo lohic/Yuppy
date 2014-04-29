@@ -2,6 +2,8 @@
 
 add_theme_support( 'post-thumbnails' );
 
+add_image_size( 'mini', 80, 80, true ); 
+add_image_size( 'small', 280, 175, true ); 
 add_image_size( 'medium', 900, 500, true ); 
 
 

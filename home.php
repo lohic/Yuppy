@@ -27,6 +27,10 @@ get_template_part('bootstrap','carousel')
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
+		<?php 
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'small' );
+		} ?>
 		<h3><?php the_title()?></h3>
 		<?php the_excerpt()?>
 		<p><a class="btn btn-default" href="<?php the_permalink(); ?>" role="button">Lire la suite »</a></p>
@@ -42,6 +46,10 @@ get_template_part('bootstrap','carousel')
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
+		<?php
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'mini' );
+		}?> 
 		<h3><?php the_title()?></h3>
 		<p><?php the_tags() ?></p>
 		<?php //the_excerpt()?>
