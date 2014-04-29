@@ -13,7 +13,30 @@
 		Logo
 	</div>
 	<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-		Menu
+		<?php
+		if ( has_nav_menu( 'footer_menu' ) ) {
+			/*wp_nav_menu( array(
+				'menu'		 => 'main_menu',
+				'container'	 => false,
+				'menu_class' => 'nav navbar-nav',
+				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			) );*/
+
+			/*wp_nav_menu( array( 
+				'menu'              => 'main_menu',
+				'depth'             => 2,
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+				'menu_class'        => 'nav navbar-nav',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker())								
+			) ;*/
+
+			wp_nav_menu( array( 
+				'menu'              => 'footer_menu'							
+			) ;
+		}
+		?>
 	</div>
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 		<p>Facebook Twitter Vimeo</p>
