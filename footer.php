@@ -33,8 +33,8 @@
 			) ;*/
 
 			wp_nav_menu( array( 
-				'menu'              => 'footer_menu'							
-			) ;
+				'menu'              => 'footer_menu'					
+			)) ;
 		}
 		?>
 	</div>
