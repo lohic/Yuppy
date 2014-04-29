@@ -10,7 +10,7 @@
 
 <div class="footer row">
 	<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-		Logo
+		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="125" height="62"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 	</div>
 	<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
 		<?php
