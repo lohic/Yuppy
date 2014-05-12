@@ -1,51 +1,50 @@
 <!-- FOOTER -->
 
-	</div>
-	
+		</div>
+		
 
-	<div class="col-xs-12 col-md-3">
-	<?php get_sidebar(); ?>
-	</div>
-</div>
-
-<div class="footer row">
-	<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="125" height="62"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
-	</div>
-	<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-		<?php
-		if ( has_nav_menu( 'footer_menu' ) ) {
-			/*wp_nav_menu( array(
-				'menu'		 => 'main_menu',
-				'container'	 => false,
-				'menu_class' => 'nav navbar-nav',
-				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			) );*/
-
-			/*wp_nav_menu( array( 
-				'menu'              => 'main_menu',
-				'depth'             => 2,
-				'container'         => 'div',
-				'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-				'menu_class'        => 'nav navbar-nav',
-				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-				'walker'            => new wp_bootstrap_navwalker())								
-			) ;*/
-
-			wp_nav_menu( array( 
-				'menu'              => 'footer_menu'					
-			)) ;
-		}
-		?>
-	</div>
-	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-		<p>Facebook Twitter Vimeo</p>
-		<p>Copyright &#169; <?php print(date(Y)); ?> | Blog propulsé par <a href="http://wordpress.org/">WordPress</a></p>
+		<div class="col-xs-12 col-md-3">
+		<?php get_sidebar(); ?>
+		</div>
 	</div>
 </div>
 
-	</div>
+<div class="container">
+	<div class="footer row">
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="125" height="62"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
+		</div>
+		<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+			<?php
+			if ( has_nav_menu( 'footer_menu' ) ) {
+				/*wp_nav_menu( array(
+					'menu'		 => 'main_menu',
+					'container'	 => false,
+					'menu_class' => 'nav navbar-nav',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				) );*/
 
+				/*wp_nav_menu( array( 
+					'menu'              => 'main_menu',
+					'depth'             => 2,
+					'container'         => 'div',
+					'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+					'menu_class'        => 'nav navbar-nav',
+					'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+					'walker'            => new wp_bootstrap_navwalker())								
+				) ;*/
+
+				wp_nav_menu( array( 
+					'menu'              => 'footer_menu'					
+				)) ;
+			}
+			?>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<p>Facebook Twitter Vimeo</p>
+			<p>Copyright &#169; <?php print(date(Y)); ?> | Blog propulsé par <a href="http://wordpress.org/">WordPress</a></p>
+		</div>
+	</div>
 </div><!-- fermeture div "container" -->
 
 <?php wp_footer(); ?>

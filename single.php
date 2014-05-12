@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- GABARIT SINGLE.PHP -->
+<!-- SINGLE.PHP -->
 
 <div id="content">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
@@ -25,5 +25,7 @@
 			<p>Désolé, aucun article ne correspond à vos critères.</p>
 <?php endif; ?>
 </div>
+
+<!-- end SINGLE.PHP -->
 
 <?php get_footer(); ?>

@@ -29,11 +29,11 @@ body{
 
 
 .container{
-	background: white;
+	background: #fff;
 }
 
 .header{
-	background: black;
+	background: #000;
 }
 
 .footer{
@@ -129,6 +129,27 @@ a, a:hover{ /* ... ne marche pas */
 	content:"\e83f";
 	font-size: 0.8em;
 }
+
+
+
+/**
+ * 
+ *			CONTENT
+ * 
+ */
+
+h1.page-header:first-child{
+	margin-top: 20px;
+}
+
+
+
+
+/**
+ * 
+ *		MEDIAQUERIES
+ * 
+ */
 
 
 /* Extra Small */

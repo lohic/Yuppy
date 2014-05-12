@@ -47,4 +47,4 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 </div>
 <?php endif;
 wp_reset_postdata(); ?>
-<!-- FIN DE bootsrap-carousel.php -->
+<!-- fin  bootsrap-carousel.php -->
