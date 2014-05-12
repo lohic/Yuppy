@@ -56,5 +56,11 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-md-9">
+			<!-- breadcrumb -->
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<?php dimox_breadcrumbs(); ?>
+				</div>
+			</div>
 	
 <!-- end HEADER.php -->

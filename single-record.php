@@ -2,8 +2,6 @@
 
 <!-- SINGLE-RECORDS.PHP -->
 
-
-
 <div id="content" class="row">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 
@@ -14,10 +12,6 @@ if ( is_post_type_archive() ) {
     <?php
 }
 ?>
-
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<?php dimox_breadcrumbs(); ?>
-	</div>
 
 	<?php if( have_rows('caroussel') ): ?>
 

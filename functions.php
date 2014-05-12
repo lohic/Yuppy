@@ -285,7 +285,10 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 
 
 
-
+/**
+ * BREADCRUMB
+ * @return [type] [description]
+ */
 function dimox_breadcrumbs() {
 
 	$showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
@@ -391,5 +394,8 @@ function dimox_breadcrumbs() {
 
 	}
 } // end dimox_breadcrumbs()
+
+
+
 
 
