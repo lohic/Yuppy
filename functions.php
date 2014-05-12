@@ -9,7 +9,8 @@ if(is_file(dirname(__File__) . '/acf/fields.php') && site_url() != 'http://local
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'mini', 80, 80, true ); 
-add_image_size( 'home', 280, 175, true ); 
+//add_image_size( 'home', 280, 175, true ); 
+add_image_size( 'home', 320, 200, true ); 
 add_image_size( 'medium', 900, 500, true ); 
 
 
@@ -53,13 +54,13 @@ add_theme_support( 'custom-background', $background_presets  );
 if( ! function_exists (my_connection_types)) {
 	function my_connection_types() {
 		p2p_register_connection_type( array(
-			'name' => 'discographie_to_records',
-			'from' => 'record',
-			'to' => 'discographie',
-			'reciprocal' => true,
-			//'title' => 'Albums',
-			'title' => array( 'from' => 'Discographies', 'to' => 'Artiste' ),
-			'cardinality' => 'one-to-many',
+			'name' 			=> 'discographie_to_records',
+			'from' 			=> 'record',
+			'to' 			=> 'discographie',
+			'reciprocal' 	=> true,
+			//'title' 		=> 'Albums',
+			'title' 		=> array( 'from' => 'Discographies', 'to' => 'Artiste' ),
+			'cardinality' 	=> 'one-to-many',
 		) );
 	}
 }
@@ -71,19 +72,19 @@ if( ! function_exists (my_register_post_types)) {
 		register_post_type(
 			'record',
 			array(
-				'label' => __('Records'),
-				'singular_label' => __('Record'),
-				'public' => true,
-				'show_ui' => true,
-				//'show_in_menu' => false,
-				//'menu_icon'=> get_bloginfo('template_directory') .'/images/favicon.png',
-				'show_in_nav_menus'=> false,
-				'capability_type' => 'page',
-				'rewrite' => array("slug" => "record"),
-				'hierarchical' => false,
-				'query_var' => false,
-				'supports' => array('title','custom-fields','editor','thumbnail'),
-				'menu_position' => 20,
+				'label' 			=> __('Records'),
+				'singular_label'  	=> __('Record'),
+				'public' 			=> true,
+				'show_ui' 			=> true,
+				//'show_in_menu' 	=> false,
+				//'menu_icon'		=> get_bloginfo('template_directory') .'/images/favicon.png',
+				'show_in_nav_menus'	=> false,
+				'capability_type' 	=> 'page',
+				'rewrite' 			=> array("slug" => "record"),
+				'hierarchical' 		=> false,
+				'query_var' 		=> false,
+				'supports' 			=> array('title','custom-fields','editor','thumbnail'),
+				'menu_position' 	=> 20,
 				//'taxonomies' => 
 			)
 		);	
@@ -91,19 +92,19 @@ if( ! function_exists (my_register_post_types)) {
 		register_post_type(
 			'discographie',
 			array(
-				'label' => __('Discographies'),
-				'singular_label' => __('Discographie'),
-				'public' => true,
-				'show_ui' => true,
-				//'show_in_menu' => false,
-				//'menu_icon'=> get_bloginfo('template_directory') .'/images/favicon.png',
-				'show_in_nav_menus'=> false,
-				'capability_type' => 'post',
-				'rewrite' => array("slug" => "discographie"),
-				'hierarchical' => false,
-				'query_var' => false,
-				'supports' => array('title','editor','excerpt','thumbnail'),
-				'menu_position' => 21,
+				'label' 			=> __('Discographies'),
+				'singular_label' 	=> __('Discographie'),
+				'public' 			=> true,
+				'show_ui' 			=> true,
+				//'show_in_menu' 	=> false,
+				//'menu_icon'		=> get_bloginfo('template_directory') .'/images/favicon.png',
+				'show_in_nav_menus' => false,
+				'capability_type'   => 'post',
+				'rewrite' 			=> array("slug" => "discographie"),
+				'hierarchical' 		=> false,
+				'query_var' 		=> false,
+				'supports' 			=> array('title','editor','excerpt','thumbnail'),
+				'menu_position' 	=> 21,
 			)
 		);
 

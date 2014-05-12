@@ -1,13 +1,14 @@
 <!-- FOOTER -->
 
-		</div>
+		</div><!-- .col -->
 		
 
 		<div class="col-xs-12 col-md-3">
 		<?php get_sidebar(); ?>
 		</div>
-	</div>
-</div>
+	</div><!-- .row -->
+</div><!-- .container -->
+
 
 <div class="container">
 	<div class="footer row">

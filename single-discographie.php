@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- SINGLE-RECORD.PHP -->
+<!-- SINGLE-DISCOGRAPHIE.PHP -->
 
 <div id="content" class="row">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
@@ -94,7 +94,6 @@ if ( is_post_type_archive() ) {
 						<div class='discographie'>
 							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
 							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-							<?php the_excerpt(); ?>
 						</div>
 						<?php
 					}
@@ -110,6 +109,6 @@ if ( is_post_type_archive() ) {
 <?php endif; ?>
 </div>
 
-<!-- end SINGLE-RECORD.PHP -->
+<!-- end SINGLE-DISCOGRAPHIE.PHP -->
 
 <?php get_footer(); ?>

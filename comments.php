@@ -1,4 +1,5 @@
-﻿<?php // Ne pas supprimer ces lignes
+﻿<!-- COMMENTS.PHP -->
+<?php // Ne pas supprimer ces lignes
 if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('Ne pas t&eacute;l&eacute;charger cette page directement, merci !');
 if (!empty($post->post_password)) { // s'il y a un mot de passe
 	if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // et ça ne fonctionne pas avec le cookie
@@ -54,7 +55,7 @@ $oddcomment = 'alt';
 	<?php else : // Les commentaires sont fermés ?>
 
 	<!-- Si les commentaires sont fermés -->
-<p class="nocomments">Les commentaires sont fermés !</p>
+<!--<p class="nocomments">Les commentaires sont fermés !</p>-->
 
 	<?php endif; ?>
 <?php endif; ?>
@@ -121,3 +122,5 @@ $oddcomment = 'alt';
 <?php endif; // Si l'enregistrement est requis et que l'utilisateur n'est pas connecté ?>
 
 <?php endif; // Si vous supprimez cete ligne, le ciel vous tombera sur la tête ?>
+
+<!-- fin COMMENTS.PHP -->

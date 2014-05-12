@@ -31,7 +31,7 @@ get_template_part('bootstrap','carousel')
 		if ( has_post_thumbnail() ) {
 		?>
 			<a href="<?php the_permalink();?>">
-			<?php the_post_thumbnail( 'home' ); ?>
+			<?php the_post_thumbnail( 'home', array('class'=>'img-responsive') ); ?>
 			</a>
 		<?php } ?>
 		<h3><a href="<?php the_permalink();?>"><?php the_title()?> <span><span class="fleche"></span> <?php _e("Lire l'interview");?></span></a></h3>
@@ -58,7 +58,7 @@ get_template_part('bootstrap','carousel')
 		if ( has_post_thumbnail() ) {
 		?>
 			<a href="<?php the_permalink();?>">
-			<?php the_post_thumbnail( 'mini' ); ?>
+			<?php the_post_thumbnail( 'mini', array('class'=>'img-responsive') ); ?>
 			</a>
 		<?php } ?> 
 		<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>

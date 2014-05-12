@@ -3,7 +3,7 @@
 <!-- INDEX.PHP -->
 
 
-<div id="content">
+<div id="content" class="row">
 	<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>

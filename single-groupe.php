@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- SINGLE-RECORD.PHP -->
+<!-- SINGLE-GROUPE.PHP -->
 
 <div id="content" class="row">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
@@ -78,31 +78,7 @@ if ( is_post_type_archive() ) {
 		</div>
 
 	</div>
-	<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-
-		<div>
-			<?php 
-
-				$discographie = p2p_type( 'discographie_to_records' )->get_connected(get_the_ID());
-
-
-				if ( $discographie->have_posts() ) {
-				       
-					while ( $discographie->have_posts() ) {
-						$discographie->the_post();
-						?>
-						<div class='discographie'>
-							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
-							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-							<?php the_excerpt(); ?>
-						</div>
-						<?php
-					}
-			
-				} 
-			?>
-		</div>
-	</div>
+	
 	
 	<?php endwhile; ?>
 	<?php else : ?>
@@ -110,6 +86,6 @@ if ( is_post_type_archive() ) {
 <?php endif; ?>
 </div>
 
-<!-- end SINGLE-RECORD.PHP -->
+<!-- end SINGLE-GROUPE.PHP -->
 
 <?php get_footer(); ?>
