@@ -144,6 +144,10 @@ h1.page-header:first-child{
 
 
 
+.pagination .current{
+	background : #ccc;
+}
+
 
 /**
  * 
