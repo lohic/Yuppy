@@ -48,6 +48,8 @@ get_template_part('bootstrap','carousel')
 		wp_reset_postdata();
 		?>
 	</div><!--/span-->
+
+
 	<div class="col-6 col-sm-6 col-lg-4">
 		<h2>What' Sound</h2>
 		<?php $query = new WP_Query( array( 'category_name' => 'whats-sound', 'posts_per_page'=>5 ) );
@@ -69,6 +71,8 @@ get_template_part('bootstrap','carousel')
 		wp_reset_postdata();
 		?>
 	</div><!--/span-->
+
+	
 	<div class="col-6 col-sm-6 col-lg-4">
 		<h2>Yuppy Sounds</h2>
 		<?php $query = new WP_Query( array( 'category_name' => 'yuppy-sounds', 'posts_per_page'=>3 ) );

@@ -3,7 +3,8 @@
 <!-- PAGE.PHP -->
 
 
-<div id="content">
+<div id="content" class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
@@ -20,6 +21,7 @@
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 		<?php edit_post_link('Modifier cette page', '<p>', '</p>'); ?>
 	<?php endif; ?>
+	</div>
 </div>
 
 <!-- end PAGE.PHP -->

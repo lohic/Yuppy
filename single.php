@@ -2,7 +2,9 @@
 
 <!-- SINGLE.PHP -->
 
-<div id="content">
+<div id="content" class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
@@ -24,6 +26,7 @@
 	<?php else : ?>
 			<p>Désolé, aucun article ne correspond à vos critères.</p>
 <?php endif; ?>
+	</div>
 </div>
 
 <!-- end SINGLE.PHP -->

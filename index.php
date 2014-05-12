@@ -4,6 +4,7 @@
 
 
 <div id="content" class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
@@ -23,6 +24,7 @@
 		<p>Désolé, mais vous cherchez quelque chose qui ne se trouve pas ici .</p>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 	<?php endif; ?>
+	</div>
 </div>
 
 <!-- fin INDEX.PHP -->
