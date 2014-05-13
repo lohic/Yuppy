@@ -30,13 +30,23 @@ Template Name: Records
 				<?php
 				$custom_posts = new WP_Query('post_type=record&posts_per_page=-1&orderby=menu_order&order=ASC');
 				if ($custom_posts->have_posts() ):
+				$i = 0;
 				?>
 				    <?php while ($custom_posts->have_posts()): $custom_posts->the_post(); ?>
 				        <div class="record col-lg-4 col-md-4 col-sm-6 col-xs-6">
 				        	<?php if ( has_post_thumbnail() )?><a href="<?php the_permalink(); ?>"><?php { the_post_thumbnail('home', array('class' => 'img-responsive'));?></a><?php } ?>
 				            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				        </div>
-				    <?php endwhile; ?>
+				    <?php
+				    $i++;
+				     if ($i%3 == 0){?>
+						<div class="clearfix visible-lg visible-md"></div>
+				     <?php }
+				     else if ($i%6 == 0){?>
+						<div class="clearfix visible-sm visible-xs"></div>
+				     <?php }
+
+				    endwhile; ?>
 				<?php endif; ?>
 			</div>
 		</div>
