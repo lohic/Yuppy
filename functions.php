@@ -341,9 +341,9 @@ function dimox_breadcrumbs() {
 				if ($showCurrent == 1) echo ' ' . $delimiter . '</li> ' . $before . get_the_title() . $after;
 			} else {
 				$cat = get_the_category(); $cat = $cat[0];
-				$cats = get_category_parents($cat, TRUE, ' ' . $delimiter . '</li> ');
+				$cats = '<li>'.get_category_parents($cat, TRUE, ' ' . $delimiter . '</li><li> ').'</li>';
 				if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
-				echo $cats;
+				echo str_replace('<li> </li>','',$cats);
 				if ($showCurrent == 1) echo $before . get_the_title() . $after;
 			}
 
