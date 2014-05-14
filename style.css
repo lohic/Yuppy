@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-left:20px;
 
 }
-a, a:hover{ 
+a, a:hover, a.hover{ 
 	color: #2ed3f7;
 }
 
@@ -185,7 +185,7 @@ h3, .h3{
 	text-transform:uppercase;
 	font-weight:700;
 }
-h3 :hover, .h3 :hover{ /* ?? pour le survol du lien 'lire l'interview'*/
+h3 :hover, h3 .hover{ /* ?? pour le survol du lien 'lire l'interview'*/
 }
 
 p.extrait a{
@@ -196,10 +196,10 @@ p.extrait a{
 	line-height:110%;
 }
 
-p.extrait a:hover{
+p.extrait a:hover, p.extrait a.hover{
 	text-decoration:none;
 	color:#2ed3f7;
-	}
+}
 
 h2.widgettitle{
 	font-size:0.9em;
@@ -228,7 +228,7 @@ h2.widgettitle{
 .whatsound-bloc a{
 	color: #000; 
 }
-.whatsound-bloc a:hover{
+.whatsound-bloc a:hover, .whatsound-bloc a.hover{
 	color:#2ed3f7;
 }
 .whatsound-bloc h3{
