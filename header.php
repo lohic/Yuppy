@@ -56,7 +56,7 @@
 		</div>
 		<div class="col-md-8 col-md-pull-4 col-sm-12">
 			<h1>
-				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
+				<a href="<?php icl_get_home_url(); //bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 			</h1>
 			<p class="lead"><?php bloginfo('description'); ?></p>
 		</div>
