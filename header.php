@@ -19,7 +19,7 @@
 	<!--<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap-theme.min.css">-->
 
 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1.0.0" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1.0.1" type="text/css" media="screen" />
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
@@ -35,18 +35,33 @@
 <div class="header container">
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-4 col-md-push-8 col-sm-12">
+			<p class="text-right">
+			<?php
+				languages_list();
+				function languages_list(){
+				    $languages = icl_get_languages('skip_missing=0&orderby=code');
+				    if(!empty($languages)){
+				        foreach($languages as $l){
+				            echo ' <span>';
+				            if(!$l['active']) echo '<a href="'.$l['url'].'">';
+				            echo icl_disp_language( $l['native_name'] );
+				            if(!$l['active']) echo '</a>';
+				            echo '</span>';
+				        }
+				    }
+				}
+			?>
+			</p>
+		</div>
+		<div class="col-md-8 col-md-pull-4 col-sm-12">
 			<h1>
 				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 			</h1>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
 			<p class="lead"><?php bloginfo('description'); ?></p>
 		</div>
 	</div>
+
 </div>
 	
 <div class="header container navigation">
