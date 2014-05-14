@@ -27,21 +27,23 @@ get_template_part('bootstrap','carousel')
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
-		<?php 
-		if ( has_post_thumbnail() ) {
-		?>
-			<a href="<?php the_permalink();?>">
-			<?php the_post_thumbnail( 'home', array('class'=>'img-responsive') ); ?>
-			</a>
-		<?php } ?>
-		<h3><?php the_title()?> <a href="<?php the_permalink();?>">&nbsp;&nbsp;<span><span class="fleche"> </span> <?php _e("Lire l'interview");?></span></a></h3>
-		<p class="extrait"><a href="<?php the_permalink();?>">« <?php
-		$my_excerpt = get_the_excerpt();
-		if ( $my_excerpt != '' ) {
-			// Some string manipulation performed
-		}
-		echo $my_excerpt; // Outputs the processed value to the page
-		?> »</a></p>
+		<div class="yuppyyap-bloc">
+			<?php 
+			if ( has_post_thumbnail() ) {
+			?>
+				<a href="<?php the_permalink();?>">
+				<?php the_post_thumbnail( 'home', array('class'=>'img-responsive') ); ?>
+				</a>
+			<?php } ?>
+			<h3><?php the_title()?> <a href="<?php the_permalink();?>">&nbsp;&nbsp;<span><span class="fleche"> </span> <?php _e("Lire l'interview");?></span></a></h3>
+			<p class="extrait"><a href="<?php the_permalink();?>">« <?php
+			$my_excerpt = get_the_excerpt();
+			if ( $my_excerpt != '' ) {
+				// Some string manipulation performed
+			}
+			echo $my_excerpt; // Outputs the processed value to the page
+			?> »</a></p>
+		</div>
 		<?php
 			endwhile;
 		endif;
@@ -82,22 +84,24 @@ get_template_part('bootstrap','carousel')
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
-		<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
-		<?php
+		<div class="yuppysound-bloc">
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
+			<?php
 
-		//the_excerpt()
+			//the_excerpt()
 
-		// pour corriger un probleme avec shopplugin ?
-		$content = get_the_excerpt();
-		$content = do_shortcode( $content );
-		$content = wpautop($content);
-		//$content = apply_filters('the_content', $content);
-		//the_content();
-		$content = str_replace(']]>', ']]&gt;', $content);
+			// pour corriger un probleme avec shopplugin ?
+			$content = get_the_excerpt();
+			$content = do_shortcode( $content );
+			$content = wpautop($content);
+			//$content = apply_filters('the_content', $content);
+			//the_content();
+			$content = str_replace(']]>', ']]&gt;', $content);
 
-		echo $content;
+			echo $content;
 
-		?>
+			?>
+		</div>
 		<?php
 			endwhile;
 		endif;
