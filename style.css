@@ -71,9 +71,14 @@ body{
 	line-height:1.8em;
 }
 
+.navbar-default .navbar-nav>li>a:hover{
+	color:#2ed3f7;
+	text-decoration:none;
+	}
+
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
 	background-color: transparent;
-	border-bottom: solid 5px #2ed3f7;
+	border-bottom: solid 5px #2ed3f7; /* n'est plus pris en compte depuis un commit ?? */
 	color: #2ed3f7;
 	min-height:50px;
 }
@@ -87,10 +92,15 @@ body{
 .navbar-form .form-control{
 	padding: 0px 6px;
 	background: black;
+	color:#FFF;
 }
 
 #search-btn{
-	
+	font-size:1.2em;
+	line-height:80%;
+}
+#search-btn:hover{
+	color:#2ed3f7;/* si on survole à côté ça grise par défaut + petit mouvement du champ texte */
 }
 
 .form-control{
@@ -166,6 +176,7 @@ h1 img{
 h2, .h2{
 	font-size:2.8em;
 	font-weight:200;
+	margin-bottom:20px;
 }
 
 h3, .h3{
@@ -175,16 +186,25 @@ h3, .h3{
 	font-weight:700;
 }
 h3 :hover, .h3 :hover{ /* ?? pour le survol du lien 'lire l'interview'*/
-	text-decoration:none;
-	color:#000;
 }
 
-p.extrait{
+p.extrait a{
+	color:#000;
 	font-size:1.8em;
 	font-style:italic;
 	font-weight:500;
 	line-height:110%;
-	
+}
+
+p.extrait a:hover{
+	text-decoration:none;
+	color:#2ed3f7;
+	}
+
+h2.widgettitle{
+	font-size:0.9em;
+	font-weight:300;
+	margin-bottom:5px;
 }
 .pagination .current{
 	background : #ccc;
@@ -193,20 +213,70 @@ p.extrait{
 .yuppyyap-bloc{
 
 }
-
+.yuppyyap-bloc .fleche{
+	color:#2ed3f7;
+}
 .whatsound-bloc{
-	margin-top: 10px: 
+	margin-top: 10px; 
 }
 
 .whatsound-bloc .vignette{
 	float: left;
-	margin-right: 10px;
+	margin-right: 20px;
+	margin-bottom:5px;
 }
-
+.whatsound-bloc a{
+	color: #000; 
+}
+.whatsound-bloc a:hover{
+	color:#2ed3f7;
+}
+.whatsound-bloc h3{
+	font-family: "omnes-pro", sans-serif;
+	font-weight:500;
+	line-height:120%;
+	text-transform:none; 
+	font-size:1.1em;
+	margin:0;
+}
 
 .yuppysound-bloc{
 
 }
+
+.footer{
+	font-family: "omnes-pro", sans-serif;
+	color:#FFF;
+	font-weight:300;
+	font-size:0.85em;
+	margin-top:30px;
+	padding-bottom:30px;
+}
+.footer, .footer a{
+	color:#EEE;
+}
+
+.footer a:hover{
+	color:#2ed3f7;
+	text-decoration:none;
+}
+
+.footer ul, .footer ul li{
+	display:inline-block;
+	list-style:none;
+	margin:7px 30px 0 0;
+	padding:0;
+}
+.footer ul.social{
+	margin:15px 0 20px 0;
+}
+.footer ul.social li{
+	list-style:none;
+	display:inline;
+	margin:0 10px 0 0;
+	padding:0;
+}
+
 /**
  * 
  *		MEDIAQUERIES
@@ -234,7 +304,78 @@ p.extrait{
 		padding-left: 0px;
 	}
 }
+	.navbar-default .navbar-nav>li>a{
+		font-size:1.2em;
+	}
+	.carousel-indicators{
+		position: relative;
+		bottom: auto;
+		left: auto;
+		z-index: 15;
+		width: auto;
+		margin-left: auto;
+		margin-top:20px;
+		padding-left: 0;
+		list-style: none;
+		text-align: right;
+		margin-bottom:10px;
+	}
 
+	.carousel-indicators li{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0;
+		margin-left: 6px;
+		text-indent: -999px;
+		border: 0;
+		border-radius: 16px;
+		cursor: pointer;
+		background-color: #000;
+		padding: 0;
+	}
+
+	.carousel-indicators .active{
+		margin: 0;
+		margin-left: 6px;
+		margin-right: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #2ed3f7;
+		border: 0;
+	}
+
+	.carousel-caption{
+		position: absolute;
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin:15px;
+		padding: 22px 8px 22px 22px;
+		background:rgba(46,211,247,0.8);
+		z-index: 10;
+		text-align: left;
+		text-shadow: none;
+		width:260px;
+		font-size: 1em;
+		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
+	}
+	.carousel-caption h1 a{
+		color:#FFF;
+		text-decoration: none;
+		font-weight: 200;
+		line-height: 1em;
+		font-size: 1em;
+	}
+
+	.carousel-caption p a{
+		color:#000;
+		text-decoration: none;
+		text-transform:uppercase;
+		font-weight:700;
+		font-size: 0.75em;
+	}
 /* Large */
 @media(min-width:1200px){
 	.container{
@@ -246,6 +387,9 @@ p.extrait{
 		padding-left: 0px;
 	}
 
+	.navbar-default .navbar-nav>li>a{
+		font-size:1.4em;
+	}
 
 	.carousel-indicators{
 		position: relative;
