@@ -50,9 +50,10 @@ body{
 	background: none;
 	border-width: 0;
 	border-top-width: 1px;
+	border-top-color:#CCC;
 	border-radius: 0;
 	margin-bottom: 0;
-	min-height: 30px;
+	min-height: 50px;
 }
 
 
@@ -64,18 +65,22 @@ body{
 .navbar-default .navbar-nav>li>a{
 	color:white;
 	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: 200;
+	font-family: "omnes-pro", sans-serif;
+	font-size:1.4em;
+	line-height:1.8em;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
 	background-color: transparent;
-	border-bottom: solid 4px #00CCFF;
-	color: #00CCFF;
+	border-bottom: solid 5px #2ed3f7;
+	color: #2ed3f7;
+	min-height:50px;
 }
 
 .navbar-form{
 	padding: 0px 15px;
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-bottom: 0px;
 }
 
@@ -87,39 +92,48 @@ body{
 .form-control{
 	border-radius: 0;
 	border-color: transparent;
-	color:white;
+	border: 1px solid #CCC;
+	height:25px;
+	font-family: "omnes-pro", sans-serif;
+	font-size:1em;
 }
 
 .form-group .btn{
 	border-radius: 0;
+	height:25px;
 }
 
-.btn-default{
+.btn-default {
 	background: black;
 	border-color: transparent;
 	color: white;
+	}
+.btn-default:hover{
+	background: transparent;
+	border:none;
+/* à revoir */
 }
-/* ajouts Sophie */
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: "omnes-pro", sans-serif;
-	font-weight: 300; /* ... ne marche pas */
+	font-weight: 300;
 }
 
 .invisible{
 	display: none;
 }
 
-.lead{ /* ... ne marche pas */
+.lead{
 	color: #FFF;
 	font-style: italic;
+	font-weight:200;
+	font-size:1.6em;
+	margin-left:20px;
 
 }
-a, a:hover{ /* ... ne marche pas */
-	color: #00CCFF;
+a, a:hover{ 
+	color: #2ed3f7;
 }
-
-/* FIN ajouts Sophie */
-
 
 .fleche{
 	font-family: "fleches",sans-serif;
@@ -127,7 +141,7 @@ a, a:hover{ /* ... ne marche pas */
 .fleche:before{
 	font-family: "fleches",sans-serif;
 	content:"\e83f";
-	font-size: 0.8em;
+	font-size: 1.3em;
 }
 
 
@@ -141,9 +155,33 @@ a, a:hover{ /* ... ne marche pas */
 h1.page-header:first-child{
 	margin-top: 20px;
 }
+h1 img{
+	margin: 10px 0 0 20px;
+}
 
+h2, .h2{
+	font-size:2.8em;
+	font-weight:200;
+}
 
+h3, .h3{
+	font-size:0.9em;
+	font-family: "ff-dagny-web-pro", sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+}
+h3 :hover, .h3 :hover{ /* ?? pour le survol du lien 'lire l'interview'*/
+	text-decoration:none;
+	color:#000;
+}
 
+p.extrait{
+	font-size:1.8em;
+	font-style:italic;
+	font-weight:500;
+	line-height:110%;
+	
+}
 .pagination .current{
 	background : #ccc;
 }
@@ -200,13 +238,13 @@ h1.page-header:first-child{
 		padding-left: 0;
 		list-style: none;
 		text-align: right;
-		margin-bottom:18px;
+		margin-bottom:10px;
 	}
 
 	.carousel-indicators li{
 		display: inline-block;
-		width: 14px;
-		height: 14px;
+		width: 15px;
+		height: 15px;
 		margin: 0;
 		margin-left: 6px;
 		text-indent: -999px;
@@ -221,9 +259,9 @@ h1.page-header:first-child{
 		margin: 0;
 		margin-left: 6px;
 		margin-right: 0;
-		width: 14px;
-		height: 14px;
-		background-color: #00CCFF;
+		width: 15px;
+		height: 15px;
+		background-color: #2ed3f7;
 		border: 0;
 	}
 
@@ -235,20 +273,27 @@ h1.page-header:first-child{
 		bottom: 0;
 		margin:15px;
 		padding: 22px 8px 22px 22px;
-		background:rgba(0,204,255,0.8);
+		background:rgba(46,211,247,0.8);
 		z-index: 10;
-		color: #fff;
 		text-align: left;
 		text-shadow: none;
 		width:260px;
-		font-family: "omnes-pro", sans-serif;
-		font-weight: 400;
-		line-height: 35px;
-		font-size: 35px;
+		font-size: 1em;
+		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
+	}
+	.carousel-caption h1 a{
+		color:#FFF;
+		text-decoration: none;
+		font-weight: 200;
+		line-height: 1em;
+		font-size: 1.1em;
 	}
 
-	.carousel-caption a{
-		color:white;
+	.carousel-caption p a{
+		color:#000;
 		text-decoration: none;
+		text-transform:uppercase;
+		font-weight:700;
+		font-size: 0.85em;
 	}
 }
