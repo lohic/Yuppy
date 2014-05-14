@@ -5,7 +5,7 @@
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="Chercher" value="<?php the_search_query(); ?>" name="s" id="s">
 				<span class="input-group-btn">
-					<button type="submit" id="searchsubmit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					<button type="submit" id="searchsubmit" class="btn btn-default"><span id="search-btn" class="glyphicon glyphicon-search"></span></button>
 				</span>
 			</div>
 		</div>
