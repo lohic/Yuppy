@@ -186,6 +186,14 @@ p.extrait{
 	background : #ccc;
 }
 
+.whatsound-bloc{
+	margin-top: 10px: 
+}
+
+.whatsound-bloc .vignette{
+	float: left;
+	margin-right: 10px;
+}
 
 /**
  * 

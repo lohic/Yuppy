@@ -35,13 +35,13 @@ get_template_part('bootstrap','carousel')
 			</a>
 		<?php } ?>
 		<h3><?php the_title()?> <a href="<?php the_permalink();?>">&nbsp;&nbsp;<span><span class="fleche"> </span> <?php _e("Lire l'interview");?></span></a></h3>
-		<p class="extrait">« <?php
+		<p class="extrait"><a href="<?php the_permalink();?>">« <?php
 		$my_excerpt = get_the_excerpt();
 		if ( $my_excerpt != '' ) {
 			// Some string manipulation performed
 		}
 		echo $my_excerpt; // Outputs the processed value to the page
-		?> »</p>
+		?> »</a></p>
 		<?php
 			endwhile;
 		endif;
@@ -56,15 +56,18 @@ get_template_part('bootstrap','carousel')
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
-		<?php 
-		if ( has_post_thumbnail() ) {
-		?>
-			<a href="<?php the_permalink();?>">
-			<?php the_post_thumbnail( 'mini', array('class'=>'img-responsive') ); ?>
-			</a>
-		<?php } ?> 
-		<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
-		<p><?php echo custom_taxonomies_terms_links('&nbsp;/ ','genre'); ?></p>
+		<div class="whatsound-bloc">
+			<?php 
+			if ( has_post_thumbnail() ) {
+			?>
+				<a href="<?php the_permalink();?>">
+				<?php the_post_thumbnail( 'mini', array('class'=>'img-responsive vignette') ); ?>
+				</a>
+			<?php } ?> 
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
+			<p><?php echo custom_taxonomies_terms_links('&nbsp;/ ','genre'); ?></p>
+			<div class="clearfix"></div>
+		</div>
 		<?php
 			endwhile;
 		endif;
