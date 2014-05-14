@@ -158,6 +158,10 @@ a, a:hover, a.hover{
 	font-size: 1.3em;
 }
 
+.breadcrumb{
+	padding: 8px 0px;
+	background: none;
+}
 
 
 /**
