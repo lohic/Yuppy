@@ -13,6 +13,8 @@ add_image_size( 'mini', 80, 80, true );
 add_image_size( 'home', 320, 200, true ); 
 add_image_size( 'medium', 900, 500, true ); 
 
+add_image_size( 'sidebar', 400, 9999, false ); 
+
 
 // https://github.com/twittem/wp-bootstrap-navwalker
 require_once('inc/wp_bootstrap_navwalker.php');
