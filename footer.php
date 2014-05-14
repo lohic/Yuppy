@@ -13,7 +13,7 @@
 <div class="container">
 	<div class="footer row">
 		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-			<a href="<?php icl_get_home_url(); //bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="125" height="62"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
+			<a href="<?php echo icl_get_home_url();  //bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="125" height="62"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 		</div>
 		<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
 			<?php
@@ -47,7 +47,7 @@
 				<li><a href="https://twitter.com/BEYUPPY"><img src="<?php bloginfo('template_url'); ?>/images/icn-twitter.png" alt="Facebook YUPPY" width="20" height="20"/></li>
 				<li><a href="https://http://vimeo.com/yuppy"><img src="<?php bloginfo('template_url'); ?>/images/icn-vimeo.png" alt="Facebook YUPPY" width="20" height="20"/></li>
 			</ul>
-			<p>&#169; <?php print(date(Y)); ?> <a href="<?php bloginfo('url'); ?>">YUPPY</a> — All rights reserved.</p>
+			<p>&#169; <?php print(date(Y)); ?> <a href="<?php  echo icl_get_home_url(); ?>">YUPPY</a> — All rights reserved.</p>
 		</div>
 	</div>
 </div><!-- fermeture div "container" -->
