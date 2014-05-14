@@ -42,8 +42,12 @@
 			?>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<p>Facebook Twitter Vimeo</p>
-			<p>Copyright &#169; <?php print(date(Y)); ?> | Blog propulsé par <a href="http://wordpress.org/">WordPress</a></p>
+			<ul class="social">
+				<li><a href="https://www.facebook.com/BEYUPPY"><img src="<?php bloginfo('template_url'); ?>/images/icn-facebook.png" alt="Facebook YUPPY" width="20" height="20"/></li>
+				<li><a href="https://twitter.com/BEYUPPY"><img src="<?php bloginfo('template_url'); ?>/images/icn-twitter.png" alt="Facebook YUPPY" width="20" height="20"/></li>
+				<li><a href="https://http://vimeo.com/yuppy"><img src="<?php bloginfo('template_url'); ?>/images/icn-vimeo.png" alt="Facebook YUPPY" width="20" height="20"/></li>
+			</ul>
+			<p>&#169; <?php print(date(Y)); ?> <a href="<?php bloginfo('url'); ?>">YUPPY</a> — All rights reserved.</p>
 		</div>
 	</div>
 </div><!-- fermeture div "container" -->
