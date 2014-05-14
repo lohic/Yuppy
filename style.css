@@ -119,9 +119,9 @@ body{
 
 .btn-default {
 	background: black;
-	border-color: transparent;
+	border: none;
 	color: white;
-	}
+}
 .btn-default:hover{
 	background: transparent;
 	border:none;
