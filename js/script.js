@@ -36,4 +36,37 @@ jQuery( document ).ready(function( $ ) {
 		// console.log($(this).parent().parent().find('h3 a').text());
 	});
 
+
+	$('.yuppyyap-bloc .vignette').on('mouseenter mouseleave',function(event){
+		//console.log(event.type);
+		if(event.type == 'mouseenter'){
+			$(this).parent().parent().find('h3 a').addClass('hover');
+			$(this).parent().parent().find('.extrait a').addClass('hover');
+		}
+		if(event.type == 'mouseleave'){
+			$(this).parent().parent().find('h3 a').removeClass('hover');
+			$(this).parent().parent().find('.extrait a').removeClass('hover');
+		}
+	});
+
+	$('.yuppyyap-bloc .extrait').on('mouseenter mouseleave',function(event){
+		//console.log(event.type);
+		if(event.type == 'mouseenter'){
+			$(this).parent().parent().find('h3 a').addClass('hover');
+		}
+		if(event.type == 'mouseleave'){
+			$(this).parent().parent().find('h3 a').removeClass('hover');
+		}
+	});
+
+	$('.yuppyyap-bloc h3 a').on('mouseenter mouseleave',function(event){
+		//console.log(event.type);
+		if(event.type == 'mouseenter'){
+			$(this).parent().parent().parent().find('.extrait a').addClass('hover');
+		}
+		if(event.type == 'mouseleave'){
+			$(this).parent().parent().parent().find('.extrait a').removeClass('hover');
+		}
+	});
+
 });
