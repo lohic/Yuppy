@@ -241,7 +241,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
  * @param  [type] $taxonomie [description]
  * @return [type]            [description]
  */
-function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
+function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null, $link=true){
 	// get post by post id
 	$post = get_post( $post->ID );
 
@@ -261,11 +261,15 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 			if ( !empty( $terms ) ) {
 				//$out[] = "<h2>" . $taxonomy->label . "</h2>\n<ul>";
 				foreach ( $terms as $term ) {
-					$out[] =
-					'<a href="'
-					.get_term_link( $term->slug, $taxonomy_slug ) .'">'
-					.$term->name
-					."</a>";
+					if($link){
+						$out[] =
+						'<a href="'
+						.get_term_link( $term->slug, $taxonomy_slug ) .'">'
+						.$term->name
+						."</a>";
+					}else{
+						$out[] = $term->name;
+					}
 				}
 				//$out[] = "</ul>\n";
 			}
@@ -276,11 +280,15 @@ function custom_taxonomies_terms_links($glue = ', ',$taxonomie = null){
 		if ( !empty( $terms ) ) {
 			//$out[] = "<h2>" . $taxonomy->label . "</h2>\n<ul>";
 			foreach ( $terms as $term ) {
-				$out[] =
-				'<a href="'
-				.get_term_link( $term->slug, $taxonomie ) .'">'
-				.$term->name
-				."</a>";
+				if($link){
+					$out[] =
+					'<a href="'
+					.get_term_link( $term->slug, $taxonomie ) .'">'
+					.$term->name
+					."</a>";
+				}else{
+					$out[] = $term->name;
+				}
 			}
 			//$out[] = "</ul>\n";
 		}

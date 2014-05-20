@@ -67,7 +67,7 @@ get_template_part('bootstrap','carousel')
 				</a>
 			<?php } ?> 
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title()?></br><!--peut-on rendre le roll-over solidaire ?-->
-			<?php echo custom_taxonomies_terms_links('&nbsp;/ ','album'); ?></a></h3>
+			<?php echo custom_taxonomies_terms_links('&nbsp;/ ','album',false); ?></a></h3>
 			<p><?php echo custom_taxonomies_terms_links('&nbsp;/ ','genre'); ?></p>
 			<div class="clearfix"></div>
 		</div>
