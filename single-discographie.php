@@ -16,6 +16,8 @@ if ( is_post_type_archive() ) {
 	<?php if( have_rows('caroussel') ): ?>
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">	
+
+		<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 		
 		<div id="carousel-home" class="carousel slide" data-ride="carousel" data-wrap="false">
 			<!-- Indicators -->
@@ -61,7 +63,6 @@ if ( is_post_type_archive() ) {
 	<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
 	
 		<div class="post" id="post-<?php the_ID(); ?>">
-				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 				
 				<!--<p class="postmetadata">
 					<small><?php the_date() ?> à <?php the_time() ?> par <?php the_author() ?> | Cat&eacute;gorie : <?php the_category(', ') ?> | <?php the_tags() ?></small>
