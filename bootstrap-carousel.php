@@ -32,8 +32,10 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 			<div class="container">
 				<div class="carousel-caption">
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<p><a href="<?php the_permalink(); ?>"><span class="fleche"></span> <?php _e("Lire la suite") ?></a></p>
+					<div class="carousel-caption-container">
+						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<p><a href="<?php the_permalink(); ?>"><span class="fleche"></span> <?php _e("Lire la suite") ?></a></p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -311,7 +311,7 @@ h2.widgettitle{
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
 	}
-	.carousel-indicators{
+	/*.carousel-indicators{
 		position: relative;
 		bottom: auto;
 		left: auto;
@@ -362,9 +362,9 @@ h2.widgettitle{
 		text-align: left;
 		text-shadow: none;
 		width:260px;
-		font-size: 1em;
+		font-size: 1em;*/
 		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
-	}
+	/*}
 	.carousel-caption h1 a{
 		color:#FFF;
 		text-decoration: none;
@@ -379,7 +379,7 @@ h2.widgettitle{
 		text-transform:uppercase;
 		font-weight:700;
 		font-size: 0.75em;
-	}
+	}*/
 /* Large */
 @media(min-width:1200px){
 	.container{
@@ -436,7 +436,7 @@ h2.widgettitle{
 	.carousel-caption{
 		position: absolute;
 		left: auto;
-		top: 0;
+		bottom: 0;
 		right: 0;
 		bottom: 0;
 		margin:15px;
@@ -446,15 +446,27 @@ h2.widgettitle{
 		text-align: left;
 		text-shadow: none;
 		width:260px;
+		height: calc(100% - 30px);
 		font-size: 1em;
 		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
 	}
+	
+	.carousel-caption-container{
+		position: absolute;
+		bottom: 2.5em;
+	}
+
 	.carousel-caption h1 a{
 		color:#FFF;
 		text-decoration: none;
 		font-weight: 200;
 		line-height: 1em;
 		font-size: 1.1em;
+	}
+
+	.carousel-caption p{
+		margin-top:20px;
+		margin-bottom:0;
 	}
 
 	.carousel-caption p a{
