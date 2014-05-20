@@ -11,9 +11,9 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'mini', 80, 80, true ); 
 //add_image_size( 'home', 280, 175, true ); 
 add_image_size( 'home', 320, 200, true ); 
-add_image_size( 'medium', 900, 405, true ); 
+//add_image_size( 'medium', 400, 9999, false ); 
 
-add_image_size( 'sidebar', 400, 9999, false ); 
+add_image_size( 'carousel', 900, 405, true );
 
 
 // https://github.com/twittem/wp-bootstrap-navwalker

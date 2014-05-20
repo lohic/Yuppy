@@ -29,7 +29,7 @@ if($sticky_query->have_posts() && count($sticky)>0) : ?>
 		while($sticky_query->have_posts()) : $sticky_query->the_post();
 		if(has_post_thumbnail()) :?>
 		<div class="item<?php if($i == 0){ echo ' active'; } ?>">
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'carousel' ); ?></a>
 			<div class="container">
 				<div class="carousel-caption">
 					<div class="carousel-caption-container">

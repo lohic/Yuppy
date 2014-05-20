@@ -38,7 +38,7 @@ if ( is_post_type_archive() ) {
 
 					$alt    = $image['alt'];
 
-					$size   = 'medium';
+					$size   = 'carousel';
 					$thumb  = $image['sizes'][ $size ];
 					$width  = $image['sizes'][ $size . '-width' ];
 					$height = $image['sizes'][ $size . '-height' ];

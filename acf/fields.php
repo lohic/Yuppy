@@ -25,7 +25,7 @@ if(function_exists("register_field_group"))
 					),
 					array (
 						'key' => 'field_5371171a04193',
-						'label' => 'TItre',
+						'label' => 'Titre',
 						'name' => 'titre',
 						'type' => 'text',
 						'column_width' => '',
