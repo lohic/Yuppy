@@ -45,7 +45,7 @@
 				        foreach($languages as $l){
 				            echo ' <span>';
 				            if(!$l['active']) echo '<a href="'.$l['url'].'">';
-				            echo icl_disp_language( $l['native_name'] );
+				            echo substr(icl_disp_language( $l['native_name'] ),0,2);
 				            if(!$l['active']) echo '</a>';
 				            echo '</span>';
 				        }
