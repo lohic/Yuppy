@@ -234,6 +234,7 @@ h2.widgettitle{
 }
 .whatsound-bloc a:hover, .whatsound-bloc a.hover{
 	color:#2ed3f7;
+	text-decoration: underline;
 }
 .whatsound-bloc h3{
 	font-family: "omnes-pro", sans-serif;
