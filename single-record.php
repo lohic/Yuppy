@@ -91,16 +91,25 @@ if ( is_post_type_archive() ) {
 
 
 				if ( $discographie->have_posts() ) {
+
+					$i = 0;
 				       
 					while ( $discographie->have_posts() ) {
 						$discographie->the_post();
 						?>
 						<div class='discographie col-lg-12 col-md-12 col-sm-12 col-xs-6'>
-							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
 							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
 							<?php the_excerpt(); ?>
 						</div>
 						<?php
+						$i++;
+						if ($i%2 == 0){?>
+						<div class="clearfix visible-xs"></div>
+						<?php 
+
+						}
+							
 					}
 			
 				} 
