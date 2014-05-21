@@ -23,7 +23,7 @@ if ( function_exists('register_sidebar') )
 register_sidebar(
 	array(
 		'name'=>'Sidebar',
-		'before_widget' => '<div id="%1$s" class="widget col-12 col-md-12 col-sm-3 col-xs-12 %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget col-12 col-md-12 col-sm-4 col-xs-12 %2$s">',
 		'after_widget'  => "</div>\n"
 	)
 );
