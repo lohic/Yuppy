@@ -24,6 +24,13 @@ jQuery( document ).ready(function( $ ) {
 	  // console.log("fin du slide");
 	});
 
+
+
+	/**
+	 * GESTION DES ROLLOVERS DE LA HOME
+	 * @param  {[type]} event [description]
+	 * @return {[type]}       [description]
+	 */
 	$('.whatsound-bloc .vignette').on('mouseenter mouseleave',function(event){
 		//console.log(event.type);
 		if(event.type == 'mouseenter'){
@@ -32,8 +39,6 @@ jQuery( document ).ready(function( $ ) {
 		if(event.type == 'mouseleave'){
 			$(this).parent().parent().find('h3 a').removeClass('hover');
 		}
-
-		// console.log($(this).parent().parent().find('h3 a').text());
 	});
 
 

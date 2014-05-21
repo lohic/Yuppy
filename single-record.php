@@ -13,13 +13,16 @@ if ( is_post_type_archive() ) {
 }
 ?>
 
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="row">
+			<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+			</div>
+		</div>
+
 	<?php if( have_rows('caroussel') ): ?>
 
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">	
-		
-		<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-
-		<div id="carousel-home" class="carousel slide" data-ride="carousel" data-wrap="false">
+		<div id="carousel-page" class="carousel slide" data-ride="carousel" data-wrap="false">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<?php
@@ -27,7 +30,7 @@ if ( is_post_type_archive() ) {
 				while( have_rows('caroussel') ): the_row();
 					//$image = get_sub_field('image');
 				?>
-				<li data-target="#carousel-home" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){ echo 'active'; } ?>"></li>
+				<li data-target="#carousel-page" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){ echo 'active'; } ?>"></li>
 				<?php
 				$i ++;
 				endwhile; ?>
@@ -54,10 +57,9 @@ if ( is_post_type_archive() ) {
 			</div>
 		</div>
 
+	<?php endif; ?>
 
 	</div>
-
-	<?php endif; ?>
 
 
 	<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
@@ -82,7 +84,7 @@ if ( is_post_type_archive() ) {
 	</div>
 	<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 
-		<div>
+		<div class="row">
 			<?php 
 
 				$discographie = p2p_type( 'discographie_to_records' )->get_connected(get_the_ID());
@@ -93,7 +95,7 @@ if ( is_post_type_archive() ) {
 					while ( $discographie->have_posts() ) {
 						$discographie->the_post();
 						?>
-						<div class='discographie'>
+						<div class='discographie col-lg-12 col-md-12 col-sm-12 col-xs-6'>
 							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
 							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 							<?php the_excerpt(); ?>

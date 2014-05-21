@@ -172,6 +172,12 @@ a.hover{
  * 
  */
 
+.page-header{
+	padding-bottom: 9px;
+	margin: 40px 0 20px;
+	border-bottom: 1px solid #2ed3f7;
+}
+
 h1.page-header:first-child{
 	margin-top: 20px;
 }
@@ -419,10 +425,14 @@ h2.widgettitle{
 		width: auto;
 		margin-left: auto;
 		margin-top:20px;
-		padding-left: 0;
+		padding-left: 0px;
 		list-style: none;
 		text-align: right;
 		margin-bottom:10px;
+	}
+
+	#carousel-page .carousel-indicators{
+		margin-top:-40px;
 	}
 
 	.carousel-indicators li{
