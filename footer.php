@@ -43,9 +43,9 @@
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<ul class="social">
-				<li><a href="https://www.facebook.com/BEYUPPY" class="icon facebook">facebook</a></li>
-				<li><a href="https://twitter.com/BEYUPPY" class="icon twitter">twitter</a></li>
-				<li><a href="https://http://vimeo.com/yuppy" class="icon vimeo">vimeo</a></li>
+				<li><a href="https://www.facebook.com/BEYUPPY" class="icon facebook" target="_blank">facebook</a></li>
+				<li><a href="https://twitter.com/BEYUPPY" class="icon twitter" target="_blank">twitter</a></li>
+				<li><a href="https://http://vimeo.com/yuppy" class="icon vimeo" target="_blank">vimeo</a></li>
 			</ul>
 			<p>&#169; <?php print(date(Y)); ?> <a href="<?php  echo icl_get_home_url(); ?>">YUPPY</a> — All rights reserved.</p>
 		</div>
