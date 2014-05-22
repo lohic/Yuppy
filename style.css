@@ -437,7 +437,26 @@ h1.page-header{
  	color:#2ed3f7;
 	text-decoration:none;
 }
+/* FIN PAGE  RECORDS */
 
+/* PAGE  ARCHIVE YUPPY YAP */
+.postmetadata{
+	font-size:0.7em;
+	margin-top:0;
+	text-transform: uppercase;
+	font-weight:700;
+}
+.post h2, .post h2 a{
+	color: #000;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin-bottom:2px;
+}
+.post h2 a:hover{
+ 	color:#2ed3f7;
+	text-decoration:none;
+}
+/* FIN PAGE ARCHIVE YUPPY YAP */
 /**
  * 
  *		MEDIAQUERIES
