@@ -103,9 +103,9 @@
 
 		<div class="row">
 		<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
-			<div class="post col-lg-4 col-md-6 col-sm-6 col-xs-12" id="post-<?php the_ID(); ?>">
+			<div class="post col-lg-3 col-md-4 col-sm-4 col-xs-12" id="post-<?php the_ID(); ?>">
+				<?php if ( has_post_thumbnail() )?><a href="<?php the_permalink(); ?>"><?php { the_post_thumbnail('home', array('class' => 'img-responsive'));?></a><?php } ?>
 				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-					
 					<p class="postmetadata"><?php the_time('j F Y') ?> <!--par <?php the_author() ?> | Catégorie:-->&nbsp;&nbsp; <?php the_category(', ') ?><!-- | <?php comments_popup_link('Pas de commentaires', '1 Commentaire', '% Commentaires'); ?>--> <?php edit_post_link('Editer', ' &#124; ', ''); ?></p>
 					
 					<div class="post_content">
@@ -116,11 +116,11 @@
 
 			<?php 
 			 $i++;
-		     if ($i%3 == 0){?>
+		     if ($i%4 == 0){?>
 				<div class="clearfix visible-lg"></div>
 		     <?php }
-		     else if ($i%2 == 0){?>
-				<div class="clearfix visible-md visible-sm"></div>
+		     else if ($i%3 == 0){?>
+				<div class="clearfix visible-md sm"></div>
 		     <?php }
 
 			endwhile; ?>
