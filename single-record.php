@@ -28,11 +28,13 @@ if ( is_post_type_archive() ) {
 				<?php
 				$i=0; 
 				while( have_rows('caroussel') ): the_row();
-					//$image = get_sub_field('image');
+					$image = get_sub_field('image');
+					if( !empty($image['sizes']['carousel']) ){
 				?>
 				<li data-target="#carousel-page" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0){ echo 'active'; } ?>"></li>
 				<?php
-				$i ++;
+						$i ++;
+					}
 				endwhile; ?>
 			</ol>
 			<div class="carousel-inner">
@@ -47,12 +49,15 @@ if ( is_post_type_archive() ) {
 					$thumb  = $image['sizes'][ $size ];
 					$width  = $image['sizes'][ $size . '-width' ];
 					$height = $image['sizes'][ $size . '-height' ];
+
+					if( !empty($image['sizes']['carousel']) ){
 				?>
 				<div class="item<?php if($i == 0){ echo ' active'; } ?>">
 					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
 				</div>
 				<?php
-				$i ++;
+					$i ++;
+					}
 				endwhile; ?>
 			</div>
 		</div>
