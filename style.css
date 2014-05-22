@@ -25,6 +25,7 @@ Creation Theme by Formidable Studio
 
 body{
 	font-family: "ff-dagny-web-pro", sans-serif;
+	text-rendering: optimizeLegibility;
 }
 
 

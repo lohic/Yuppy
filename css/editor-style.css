@@ -27,12 +27,12 @@ Description: Used to style the TinyMCE editor.
 
 html .mceContentBody {
 	font-size: 100%;
-	max-width: 604px;
+	max-width: 600px;
 }
 
 body {
 	color: #141412;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-family: "ff-dagny-web-pro", sans-serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;
