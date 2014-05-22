@@ -399,17 +399,21 @@ h1.page-single{
 	width:120px;
 	height:120px;
 }
-pre{
+h6{
 	font-family:inherit;
 	font-size:0.9em;
 	font-weight:700;
 	border:0;
 	border-radius:0;
-	margin-bottom:0;
-	overflow:auto;
+	background-color:#f5f5f5;
+	padding:10px;
+	margin:1.5em 0 0;
 }
-pre+pre{
+h6+h6{
 	margin:0;
+}
+h6+p{
+	margin-top:1.5em;
 }
 
 /**
