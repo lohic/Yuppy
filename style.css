@@ -235,9 +235,7 @@ h3, .h3{
 	font-weight:700;
 }
 
-h3 :hover,
-h3 .hover{
-	/* ?? pour le survol du lien 'lire l'interview'*/
+h3 :hover,h3 .hover{
 }
 
 p.extrait a{
@@ -456,6 +454,30 @@ h1.page-header{
  	color:#2ed3f7;
 	text-decoration:none;
 }
+.pagination{
+	float:right;
+	border:0;
+	margin:0;
+}
+.pagination .current{
+	background-color:#FFF;
+}
+
+.pagination>li>span, .pagination>li:first-child>span, .pagination>li:last-child>span, .pagination>li>a, .pagination>li:first-child>a, .pagination>li:last-child>a {
+	color:#000;
+	background-color:#FFFFFF;
+	border:0;
+	border-radius:0;
+}
+.pagination>li>a:hover, .pagination>li:first-child>a:hover, .pagination>li:last-child>a:hover{
+	background-color:#2ed3f7;
+	font-weight:600;
+}
+.pagination>li>span .current, .pagination>li:first-child>span  .current, .pagination>li:last-child>span  .current, .pagination>li>a  .current, .pagination>li:first-child>a  .current, .pagination>li:last-child>a  .current {
+	background-color:#000;
+	font-weight:600;
+}
+
 /* FIN PAGE ARCHIVE YUPPY YAP */
 /**
  * 
