@@ -36,7 +36,7 @@
 				) ;*/
 
 				wp_nav_menu( array( 
-					'menu'              => 'footer_menu'					
+					'theme_location'              => 'footer_menu'					
 				)) ;
 			}
 			?>
