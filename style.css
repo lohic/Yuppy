@@ -46,6 +46,22 @@ body{
 	padding-right:0;
 }
 
+.langues{
+	font-family: "omnes-pro", sans-serif;
+	color:#DDD;
+	text-transform:uppercase;
+	font-size:1em;
+	text-align:right;
+	font-weight:600;
+}
+.langues a{
+	font-weight:300;
+	color:#DDD;
+}
+.langues a:hover{
+	text-decoration:none;
+}
+
 .navbar-default{
 	background: none;
 	border-width: 0;
@@ -158,14 +174,34 @@ a.hover{
 	font-family: "fleches",sans-serif;
 	content:"\e83f";
 	font-size: 1.3em;
+	position:relative;
+	top:1px;
 }
 
 .breadcrumb{
-	padding: 8px 0px;
+	padding: 8px 0px 0 0;
 	background: none;
+	font-size:0.85em;
+}
+ol.breadcrumb li, ol.breadcrumb li a{
+ 	color:#000;
+}
+ol.breadcrumb li.active span.current{
+ 	color:#2ed3f7;
 }
 
-
+ol.breadcrumb li a:hover{
+ 	color:#2ed3f7;
+	text-decoration:none;
+}
+.breadcrumb>li+li:before{
+	font-family: "fleches",sans-serif;
+	content:"\e83f";
+	font-size: 1.3em;
+	color:#000;
+	position:relative;
+	top:2px;
+}
 /**
  * 
  *			CONTENT
@@ -327,7 +363,7 @@ h2.widgettitle{
 	background-size: 20px 40px;
 }
 .social .soundcloud{
-	background: url(images/icn-souncloud.png) 0px 0;
+	background: url(images/icn-soundcloud.png) 0px 0;
 	background-size: 20px 40px;
 }
 
@@ -336,7 +372,45 @@ h2.widgettitle{
 	background-position: 0px -20px;
 }
 
+/* PAGE SINGLE RECORDS */
+h1.page-single{
+	text-transform:uppercase;
+	font-size:3.5em;
+	font-weight:200;
+}
 
+.carousel-inner{
+	margin-bottom:30px;
+}
+
+.post{
+	font-size:1.1em;
+}
+.discographie h3, .discographie h3 a{
+	color:#000;
+	font-weight:200;
+}
+.discographie h3 a:hover{
+ 	color:#2ed3f7;
+	text-decoration:none;
+}
+.discographie img{
+	margin-bottom:5px;
+	width:120px;
+	height:120px;
+}
+pre{
+	font-family:inherit;
+	font-size:0.9em;
+	font-weight:700;
+	border:0;
+	border-radius:0;
+	margin-bottom:0;
+	overflow:auto;
+}
+pre+pre{
+	margin:0;
+}
 
 /**
  * 
@@ -467,7 +541,7 @@ h2.widgettitle{
 	}
 
 	#carousel-page .carousel-indicators{
-		margin-top:-40px;
+		margin-top:-30px;
 	}
 
 	.carousel-indicators li{
@@ -514,7 +588,7 @@ h2.widgettitle{
 	
 	.carousel-caption-container{
 		position: absolute;
-		bottom: 2.5em;
+		bottom: 1.5em;
 	}
 
 	.carousel-caption h1 a{
@@ -525,8 +599,8 @@ h2.widgettitle{
 		font-size: 1.1em;
 	}
 
-	.carousel-caption p{
-		margin-top:20px;
+	.carousel-caption p, .carousel-caption p a{
+		margin-top:40px;
 		margin-bottom:0;
 	}
 

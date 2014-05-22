@@ -16,7 +16,7 @@ if ( is_post_type_archive() ) {
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="row">
 			<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+				<h1 class="page-single"><!--<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">--><?php the_title(); ?><!--</a>--></h1>
 			</div>
 		</div>
 
@@ -62,7 +62,7 @@ if ( is_post_type_archive() ) {
 	</div>
 
 
-	<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+	<div class="col-lg-8 col-md-9 col-sm-8 col-xs-12">
 	
 		<div class="post" id="post-<?php the_ID(); ?>">
 				<!--<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>-->
@@ -82,7 +82,7 @@ if ( is_post_type_archive() ) {
 		</div>
 
 	</div>
-	<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-push-1">
 
 		<div class="row">
 			<?php 

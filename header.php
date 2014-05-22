@@ -36,14 +36,14 @@
 
 	<div class="row">
 		<div class="col-md-4 col-md-push-8 col-sm-12">
-			<p class="text-right">
+			<p class="langues">
 			<?php
 				languages_list();
 				function languages_list(){
 				    $languages = icl_get_languages('skip_missing=0&orderby=code');
 				    if(!empty($languages)){
 				        foreach($languages as $l){
-				            echo ' <span>';
+				            echo ' <span>&nbsp;&nbsp;';
 				            if(!$l['active']) echo '<a href="'.$l['url'].'">';
 				            echo substr(icl_disp_language( $l['native_name'] ),0,2);
 				            if(!$l['active']) echo '</a>';
