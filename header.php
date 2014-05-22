@@ -70,7 +70,11 @@
 
 <div class="container">
 	<div class="row">
+		<?php if( !is_page('contact') ){ ?>
 		<div class="col-xs-12 col-md-9">
+		<?php }else{ ?>
+		<div class="col-xs-12">
+		<?php }?>
 			<!-- breadcrumb -->
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
