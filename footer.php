@@ -40,6 +40,7 @@
 				)) ;
 			}
 			?>
+			<div id="mailchimp" class="hidden"><?php echo do_shortcode('[mc4wp_form]');?></div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<ul class="social">
@@ -52,6 +53,7 @@
 		</div>
 	</div>
 </div><!-- fermeture div "container" -->
+
 
 <?php wp_footer(); ?>
 

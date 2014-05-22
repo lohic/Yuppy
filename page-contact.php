@@ -25,7 +25,7 @@
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<p>Formulaire</p>
 
-		<p>[mc4wp_form]</p>
+		<p><?php echo do_shortcode('[mc4wp_form]');?></p>
 	</div>
 </div>
 
