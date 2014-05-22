@@ -36,13 +36,13 @@ get_template_part('bootstrap','carousel')
 				</a>
 			<?php } ?>
 			<h3><?php the_title()?> &nbsp;&nbsp;<span class="fleche"> </span><span><a href="<?php the_permalink();?>"> <?php _e("Lire l'interview");?></a></span></h3>
-			<p class="extrait"><a href="<?php the_permalink();?>">« <?php
+			<p class="extrait"><a href="<?php the_permalink();?>">«&nbsp;<?php
 			$my_excerpt = get_the_excerpt();
 			if ( $my_excerpt != '' ) {
 				// Some string manipulation performed
 			}
 			echo $my_excerpt; // Outputs the processed value to the page
-			?> »</a></p>
+			?>&nbsp;»</a></p>
 		</div>
 		<?php
 			endwhile;
@@ -81,7 +81,9 @@ get_template_part('bootstrap','carousel')
 	
 	<div class="col-6 col-sm-6 col-lg-4">
 		<h2>Yuppy Sounds</h2>
-		<?php $query = new WP_Query( array( 'category_name' => 'yuppy-sounds', 'posts_per_page'=>3 ) );
+		<iframe class="iframe" width="100%" height="465" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/beyuppy/sets/selection-jeudi&amp;auto_play=false&amp;auto_advance=true&amp;buying=false&amp;liking=false&amp;download=false&amp;sharing=false&amp;show_artwork=false&amp;show_comments=false&amp;show_playcount=false&amp;show_user=false&amp;hide_related=false&amp;visual=false&amp;start_track=0&amp;callback=true&amp;color=00b5ff">
+      </iframe>
+		<?php /*$query = new WP_Query( array( 'category_name' => 'yuppy-sounds', 'posts_per_page'=>3 ) );
 
 		if($query->have_posts()) :
 			while($query->have_posts()) : $query->the_post();?>
@@ -106,7 +108,7 @@ get_template_part('bootstrap','carousel')
 		<?php
 			endwhile;
 		endif;
-		wp_reset_postdata();
+		wp_reset_postdata();*/
 		?>
 	</div><!--/span-->
 </div>
