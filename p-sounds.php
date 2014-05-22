@@ -14,7 +14,6 @@ Template Name: Sounds
 	<div class="record col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 	<?php if(have_posts()) : ?>
-		<div class="record col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<?php while(have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h1 class="page-header"><?php the_title(); ?></h1>				
@@ -23,7 +22,6 @@ Template Name: Sounds
 					</div>
 			</div>
 		<?php endwhile; ?>
-		</div>
 	<?php endif; ?>
 
 		<div class="row">
