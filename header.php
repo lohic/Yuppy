@@ -37,7 +37,26 @@
 	<div class="row">
 		<div class="col-md-4 col-md-push-8 col-sm-12">
 
-			<button class="btn btn-default btn-newsletter" data-toggle="modal" data-target="#mailchimp">S'inscrire à la newsletter</button>
+
+			<div class="langues-newsletter pull-right">
+				<button class="btn btn-default btn-newsletter" data-toggle="modal" data-target="#mailchimp">S'inscrire à la newsletter</button>
+			<?php
+				languages_list();
+				function languages_list(){
+				    $languages = icl_get_languages('skip_missing=0&orderby=code');
+				    if(!empty($languages)){
+				        foreach($languages as $l){
+				            echo ' <span>';
+				            if(!$l['active']) echo '<a href="'.$l['url'].'">';
+				            echo substr(icl_disp_language( $l['native_name'] ),0,2);
+				            if(!$l['active']) echo '</a>';
+				            echo '</span>';
+				        }
+				    }
+				}
+			?>
+			</div>
+			
 			<!-- fenetre modale -->
 			<div id="mailchimp" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-sm">
@@ -50,23 +69,6 @@
 			</div>
 			<!-- fin fenetre modale -->
 
-			<div class="langues">
-			<?php
-				languages_list();
-				function languages_list(){
-				    $languages = icl_get_languages('skip_missing=0&orderby=code');
-				    if(!empty($languages)){
-				        foreach($languages as $l){
-				            echo ' <span>&nbsp;&nbsp;';
-				            if(!$l['active']) echo '<a href="'.$l['url'].'">';
-				            echo substr(icl_disp_language( $l['native_name'] ),0,2);
-				            if(!$l['active']) echo '</a>';
-				            echo '</span>';
-				        }
-				    }
-				}
-			?>
-			</div>
 		</div>
 		<div class="col-md-8 col-md-pull-4 col-sm-12">
 			<h1>

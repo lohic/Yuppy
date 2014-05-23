@@ -96,32 +96,59 @@ a.hover{
 	border:none;
 	color:#2ed3f7;
 }
-.langues{
-	position:absolute;
-	top:20px;
-	right:25px;
+
+
+/**
+ * 
+ * 			LANGUE + NEWSLETTER
+ * 
+ */
+.langues-newsletter{
+	margin-top:20px;
+	margin-right:0;
 	font-family: "omnes-pro", sans-serif;
 	color:#DDD;
 	text-transform:uppercase;
 	font-size:1em;
-	text-align:right;
 	font-weight:600;
 }
-.langues a{
+.langues-newsletter span{
+	padding: 0;
+	margin: 0;
+	padding-left: 10px;
+}
+.langues-newsletter span+span{
+	padding-left: 4px;
+}
+
+.langues-newsletter a{
 	font-weight:300;
 	color:#DDD;
 }
-.langues a:hover{
+.langues-newsletter a:hover{
 	color:#2ed3f7;
 	text-decoration:none;
 }
-.btn-newsletter{
+.langues-newsletter .btn-newsletter{
 	color:#2ed3f7;
-	text-decoration: underline;
-	position:relative;
-	right: 60px;
-	top: 13px;
+	padding:0;
+	border-radius: 0;
+	display: inline;
+	vertical-align: baseline;
 }
+
+.langues-newsletter .btn-newsletter:hover{
+	text-decoration: underline;
+}
+
+
+/**
+ * 
+ * 			MENU
+ *
+ */
+
+
 .navbar-default{
 	background: none;
 	border-width: 0;
@@ -152,7 +179,9 @@ a.hover{
 	text-decoration:none;
 	}
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus{
 	background-color: transparent;
 	border-bottom: solid 5px #2ed3f7; /* n'est plus pris en compte depuis un commit ?? */
 	color: #2ed3f7;
@@ -218,6 +247,7 @@ ol.breadcrumb li a:hover{
 	position:relative;
 	top:2px;
 }
+
 /**
  * 
  *			CONTENT
