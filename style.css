@@ -582,7 +582,7 @@ h1.page-header{
 		bottom: 0;
 		right: 0;
 		bottom: 0;
-		margin:15px;
+		margin:0 0 15px;
 		padding: 10px;
 		background:rgba(46,211,247,0.8);
 		z-index: 10;
