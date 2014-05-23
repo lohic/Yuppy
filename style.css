@@ -155,14 +155,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .lead{
-	color: #FFF;
+	float:left;
+	color: #777;
 	font-style: italic;
 	font-weight:200;
 	font-size:1.6em;
-	margin-left:20px;
-
+	margin:85px 0 0 30px;
+	
 }
-
+.container h1{
+	float:left;
+}
 .btn-newsletter{
 	padding: 0;
 }
