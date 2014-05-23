@@ -37,7 +37,7 @@
 	<div class="row">
 		<div class="col-md-4 col-md-push-8 col-sm-12">
 
-			<button class="btn btn-default pull-right btn-newsletter" data-toggle="modal" data-target="#mailchimp">S'inscrire à la newsletter</button>
+			<button class="btn btn-default btn-newsletter" data-toggle="modal" data-target="#mailchimp">S'inscrire à la newsletter</button>
 			<!-- fenetre modale -->
 			<div id="mailchimp" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-sm">
