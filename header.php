@@ -36,7 +36,21 @@
 
 	<div class="row">
 		<div class="col-md-4 col-md-push-8 col-sm-12">
-			<p class="langues">
+
+			<button class="btn btn-default pull-right btn-newsletter" data-toggle="modal" data-target="#mailchimp">S'inscrire à la newsletter</button>
+			<!-- fenetre modale -->
+			<div id="mailchimp" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-body">
+							<?php echo do_shortcode('[mc4wp_form]');?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fin fenetre modale -->
+
+			<div class="langues">
 			<?php
 				languages_list();
 				function languages_list(){
@@ -52,27 +66,14 @@
 				    }
 				}
 			?>
-			</p>
-
-			<button class="btn btn-default pull-right btn-newsletter" data-toggle="modal" data-target="#mailchimp">Newsletter</button>
-			<!-- fenetre modale -->
-			<div id="mailchimp" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-body">
-							<?php echo do_shortcode('[mc4wp_form]');?>
-						</div>
-					</div>
-				</div>
 			</div>
-			<!-- fin fenetre modale -->
 		</div>
 		<div class="col-md-8 col-md-pull-4 col-sm-12">
 			<h1>
 				<a href="<?php echo icl_get_home_url(); //bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 			</h1>
 			<p class="lead"><?php bloginfo('description'); ?></p>
-			
+			<div class="clear"></div>
 		</div>
 	</div>
 
