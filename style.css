@@ -55,18 +55,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	display: none;
 }
 
-.container h1{
-	float:left;
-}
+
 .lead{
-	float:left;
 	color: #777;
 	font-style: italic;
 	font-weight:200;
 	font-size:1.6em;
 	margin:85px 0 0 30px;
-	
 }
+
 .clear{
 	clear:both;	
 }
@@ -533,6 +530,14 @@ h1.page-header{
 
 /* Extra Small */
 @media(max-width:767px){
+
+	#col-lang{
+		z-index:3000;
+	}
+
+	.lead{
+		margin:0 0 20px 30px;
+	}
 	
 	.carousel-indicators{
 		position: relative;
