@@ -533,6 +533,97 @@ h1.page-header{
 
 /* Extra Small */
 @media(max-width:767px){
+	
+	.carousel-indicators{
+		position: relative;
+		bottom: auto;
+		left: auto;
+		z-index: 15;
+		width: auto;
+		margin-left: auto;
+		margin-top:20px;
+		padding-left: 0px;
+		list-style: none;
+		text-align: right;
+		margin-bottom:10px;
+	}
+
+	#carousel-page .carousel-indicators{
+		margin-top:-30px;
+	}
+
+	.carousel-indicators li{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0;
+		margin-left: 6px;
+		text-indent: -999px;
+		border: 0;
+		border-radius: 16px;
+		cursor: pointer;
+		background-color: #000;
+		padding: 0;
+	}
+
+	.carousel-indicators .active{
+		margin: 0;
+		margin-left: 6px;
+		margin-right: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #2ed3f7;
+		border: 0;
+	}
+
+	.carousel-caption{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		bottom: 0;
+		margin:15px;
+		padding: 10px;
+		background:rgba(46,211,247,0.8);
+		z-index: 10;
+		text-align: left;
+		text-shadow: none;
+		/*width:260px;*/
+		/*height: calc(100% - 30px);*/
+		height:auto;
+		font-size: 1em;
+		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
+	}
+	
+	.carousel-caption-container{
+		/*position: absolute;
+		bottom: 1.5em;*/
+	}
+
+	.carousel-caption h1 {
+		margin: 0;
+		line-height: 1em;
+		font-size: 1.5em;
+	}
+
+	.carousel-caption h1 a{
+		color:#FFF;
+		text-decoration: none;
+		font-weight: 200;
+	}
+
+	.carousel-caption p, .carousel-caption p a{
+		margin-top:40px;
+		margin-bottom:0;
+	}
+
+	.carousel-caption p a{
+		color:#000;
+		text-decoration: none;
+		text-transform:uppercase;
+		font-weight:700;
+		font-size: 0.85em;
+	}
 
 }
 
@@ -542,6 +633,97 @@ h1.page-header{
 		padding-right: 0px;
 		padding-left: 0px;
 	}
+
+	.carousel-indicators{
+		position: relative;
+		bottom: auto;
+		left: auto;
+		z-index: 15;
+		width: auto;
+		margin-left: auto;
+		margin-top:20px;
+		padding-left: 0px;
+		list-style: none;
+		text-align: right;
+		margin-bottom:10px;
+	}
+
+	#carousel-page .carousel-indicators{
+		margin-top:-30px;
+	}
+
+	.carousel-indicators li{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0;
+		margin-left: 6px;
+		text-indent: -999px;
+		border: 0;
+		border-radius: 16px;
+		cursor: pointer;
+		background-color: #000;
+		padding: 0;
+	}
+
+	.carousel-indicators .active{
+		margin: 0;
+		margin-left: 6px;
+		margin-right: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #2ed3f7;
+		border: 0;
+	}
+
+	.carousel-caption{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		bottom: 0;
+		margin:15px;
+		padding: 22px;
+		background:rgba(46,211,247,0.8);
+		z-index: 10;
+		text-align: left;
+		text-shadow: none;
+		/*width:260px;*/
+		/*height: calc(100% - 30px);*/
+		height:auto;
+		font-size: 1em;
+		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
+	}
+	
+	.carousel-caption-container{
+		/*position: absolute;
+		bottom: 1.5em;*/
+	}
+
+	.carousel-caption h1 {
+		margin: 0;
+	}
+
+	.carousel-caption h1 a{
+		color:#FFF;
+		text-decoration: none;
+		font-weight: 200;
+		line-height: 1em;
+		font-size: 1.1em;
+	}
+
+	.carousel-caption p, .carousel-caption p a{
+		margin-top:40px;
+		margin-bottom:0;
+	}
+
+	.carousel-caption p a{
+		color:#000;
+		text-decoration: none;
+		text-transform:uppercase;
+		font-weight:700;
+		font-size: 0.85em;
+	}
 }
 
 /* Medium */
@@ -550,11 +732,12 @@ h1.page-header{
 		padding-right: 0px;
 		padding-left: 0px;
 	}
-}
+
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
-	}
-	/*.carousel-indicators{
+	}	
+
+	.carousel-indicators{
 		position: relative;
 		bottom: auto;
 		left: auto;
@@ -562,10 +745,14 @@ h1.page-header{
 		width: auto;
 		margin-left: auto;
 		margin-top:20px;
-		padding-left: 0;
+		padding-left: 0px;
 		list-style: none;
 		text-align: right;
 		margin-bottom:10px;
+	}
+
+	#carousel-page .carousel-indicators{
+		margin-top:-30px;
 	}
 
 	.carousel-indicators li{
@@ -595,7 +782,7 @@ h1.page-header{
 	.carousel-caption{
 		position: absolute;
 		left: auto;
-		top: 0;
+		bottom: 0;
 		right: 0;
 		bottom: 0;
 		margin:15px;
@@ -605,15 +792,27 @@ h1.page-header{
 		text-align: left;
 		text-shadow: none;
 		width:260px;
-		font-size: 1em;*/
+		height: calc(100% - 30px);
+		font-size: 1em;
 		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
-	/*}
+	}
+	
+	.carousel-caption-container{
+		position: absolute;
+		bottom: 1.5em;
+	}
+
 	.carousel-caption h1 a{
 		color:#FFF;
 		text-decoration: none;
 		font-weight: 200;
 		line-height: 1em;
-		font-size: 1em;
+		font-size: 1.1em;
+	}
+
+	.carousel-caption p, .carousel-caption p a{
+		margin-top:40px;
+		margin-bottom:0;
 	}
 
 	.carousel-caption p a{
@@ -621,8 +820,11 @@ h1.page-header{
 		text-decoration: none;
 		text-transform:uppercase;
 		font-weight:700;
-		font-size: 0.75em;
-	}*/
+		font-size: 0.85em;
+	}
+	
+}
+
 /* Large */
 @media(min-width:1200px){
 	.container{
