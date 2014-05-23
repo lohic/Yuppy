@@ -40,8 +40,9 @@
 				)) ;
 			}
 			?>
-			<div id="mailchimp" class="hidden"><?php echo do_shortcode('[mc4wp_form]');?></div>
+			
 		</div>
+	
 		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<ul class="social">
 				<li><a href="https://www.facebook.com/BEYUPPY" class="icon facebook" target="_blank">facebook</a></li>

@@ -24,9 +24,9 @@ jQuery( document ).ready(function( $ ) {
 	  // console.log("fin du slide");
 	});
 
-	$('#newsletter-sign').popover({
+	/*$('#newsletter-sign').popover({
 		content:$("#mailchimp").html(),
-	});
+	});*/	
 
 
 	/**
