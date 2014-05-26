@@ -26,7 +26,19 @@ jQuery( document ).ready(function( $ ) {
 
 	/*$('#newsletter-sign').popover({
 		content:$("#mailchimp").html(),
-	});*/	
+	});*/
+
+
+	// selection des items du menu basé sur le fil d'ariane (ajout de active)
+	$('.menu a').each(function(){
+
+		var menuelem = $(this);
+		$('.breadcrumb a').each(function(){
+			if( $(this).attr('href') == menuelem.attr('href')){
+				menuelem.parent().addClass('active');
+			}
+		});
+	});
 
 
 	/**
