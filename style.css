@@ -521,6 +521,7 @@ h1.page-header{
 }
 
 /* FIN PAGE ARCHIVE YUPPY YAP */
+
 /**
  * 
  *		MEDIAQUERIES
@@ -593,16 +594,11 @@ h1.page-header{
 		z-index: 10;
 		text-align: left;
 		text-shadow: none;
-		/*width:260px;*/
-		/*height: calc(100% - 30px);*/
 		height:auto;
 		font-size: 1em;
-		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
 	}
 	
 	.carousel-caption-container{
-		/*position: absolute;
-		bottom: 1.5em;*/
 	}
 
 	.carousel-caption h1 {
