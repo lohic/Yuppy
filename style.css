@@ -132,10 +132,12 @@ a.hover{
 	border-radius: 0;
 	display: inline;
 	vertical-align: baseline;
+	text-decoration:underline;
 }
 
 .langues-newsletter .btn-newsletter:hover{
-	text-decoration: underline;
+	color:#DDD;
+	text-decoration:none;
 }
 
 
@@ -482,16 +484,17 @@ h1.page-header{
 /* PAGE  ARCHIVE YUPPY YAP */
 .postmetadata{
 	font-size:0.7em;
-	margin-top:0;
+	margin:5px 0 0 0;
 	text-transform: uppercase;
-	font-weight:700;
+	font-weight:400;
 }
 .post h2, .post h2 a{
 	color: #000;
+	margin: 0 0 30px 0;
 	font-size: 1.3em;
 	text-transform: uppercase;
-	margin-bottom:2px;
 }
+
 .post h2 a:hover{
  	color:#2ed3f7;
 	text-decoration:none;
@@ -503,15 +506,23 @@ h1.page-header{
 }
 .pagination .current{
 	background-color:#FFF;
+	font-weight:700;
 }
 
-.pagination>li>span, .pagination>li:first-child>span, .pagination>li:last-child>span, .pagination>li>a, .pagination>li:first-child>a, .pagination>li:last-child>a {
+.pagination>li>span, .pagination>li:first-child>span, .pagination>li:last-child>span{
 	color:#000;
 	background-color:#FFFFFF;
 	border:0;
 	border-radius:0;
 }
+.pagination>li>a, .pagination>li:first-child>a, .pagination>li:last-child>a {
+	color:#2ed3f7;
+	background-color:#FFFFFF;
+	border:0;
+	border-radius:0;
+}
 .pagination>li>a:hover, .pagination>li:first-child>a:hover, .pagination>li:last-child>a:hover{
+	color:#000;
 	background-color:#2ed3f7;
 	font-weight:600;
 }
