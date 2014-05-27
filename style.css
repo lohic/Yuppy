@@ -481,7 +481,7 @@ h1.page-header{
 }
 /* FIN PAGE  RECORDS */
 
-/* PAGE  ARCHIVE YUPPY YAP */
+/* PAGE  ARCHIVE */
 .postmetadata{
 	font-size:0.7em;
 	margin:5px 0 0 0;
@@ -531,7 +531,55 @@ h1.page-header{
 	font-weight:600;
 }
 
-/* FIN PAGE ARCHIVE YUPPY YAP */
+/* FIN PAGE ARCHIVE */
+.post .postmetadata{
+	font-size:1em;
+	font-weight:700;
+	border-top:1px dotted #CCC;
+	padding-top:5px;
+}
+.post .postmetadata+.postmetadata{
+	border-top:0;
+	border-bottom:1px dotted #CCC;
+	margin:0 0 20px;
+	padding-top:0;
+}
+.tags{
+	font-weight:500;
+	font-size:0.8em;
+}
+h5{
+	float:right;
+	width:350px;
+	font-size:1.8em;
+	font-style:italic;
+	font-weight:600;
+	margin:20px;
+}
+blockquote{
+	font-size:1em;
+	border-left:0;
+	padding:5px 20px;
+	margin:0 0 10px;
+	font-style:italic;
+}
+blockquote strong{
+	border-bottom:2px solid #2ed3f7;
+}
+
+.wp-caption-text{
+	font-size:0.8em
+	}
+	
+hr {
+    display: block;
+    clear: both;
+	border-top:1px dotted #CCC;
+	margin:5px;
+	height:0;
+}
+/* PAGE  SINGLE */
+/* FIN PAGE  SINGLE */
 
 /**
  * 
