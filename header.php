@@ -19,7 +19,7 @@
 	<!--<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap-theme.min.css">-->
 
 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1.0.8" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1.0.9" type="text/css" media="screen" />
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
