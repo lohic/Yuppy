@@ -1,6 +1,5 @@
 <?php
 
-
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
@@ -22,19 +21,6 @@ if(function_exists("register_field_group"))
 						'save_format' => 'object',
 						'preview_size' => 'thumbnail',
 						'library' => 'uploadedTo',
-					),
-					array (
-						'key' => 'field_5371171a04193',
-						'label' => 'Titre',
-						'name' => 'titre',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
 					),
 				),
 				'row_min' => '',
