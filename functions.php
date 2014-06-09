@@ -18,6 +18,7 @@ add_image_size( 'carousel', 900, 405, true );
 
 // https://github.com/twittem/wp-bootstrap-navwalker
 require_once('inc/wp_bootstrap_navwalker.php');
+require_once('inc/bottom_navwalker.php');
 
 if ( function_exists('register_sidebar') )
 register_sidebar(
@@ -411,6 +412,145 @@ function dimox_breadcrumbs() {
 	}
 } // end dimox_breadcrumbs()
 
+
+
+/**
+ * Galerie au format carousel 
+ * cf http://tiffanybbrown.com/2013/02/03/wordpress-adding-custom-galleries-to-your-theme/
+ * @param  [type] $attr [description]
+ * @return [type]       [description]
+ */
+
+remove_shortcode('gallery', 'gallery_shortcode');
+add_shortcode('gallery', 'custom_gallery');
+
+function custom_gallery($attr) {
+	$post = get_post();
+ 
+	static $instance = 0;
+	$instance++;
+ 
+	# hard-coding these values so that they can't be broken
+	
+	$attr['columns'] = 1;
+	$attr['size'] = 'full';
+	$attr['link'] = 'none';
+ 
+	$attr['orderby'] = 'post__in';
+	$attr['include'] = $attr['ids'];		
+ 
+	#Allow plugins/themes to override the default gallery template.
+	$output = apply_filters('post_gallery', '', $attr);
+	
+	if ( $output != '' )
+		return $output;
+ 
+	# We're trusting author input, so let's at least make sure it looks like a valid orderby statement
+	if ( isset( $attr['orderby'] ) ) {
+		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+		if ( !$attr['orderby'] )
+			unset( $attr['orderby'] );
+	}
+ 
+	extract(shortcode_atts(array(
+		'order'      => 'ASC',
+		'orderby'    => 'menu_order ID',
+		'id'         => $post->ID,
+		'itemtag'    => 'div',
+		'icontag'    => 'div',
+		'captiontag' => 'p',
+		'columns'    => 1,
+		'size'       => 'thumbnail',
+		'include'    => '',
+		'exclude'    => ''
+	), $attr));
+ 
+	$id = intval($id);
+	if ( 'RAND' == $order )
+		$orderby = 'none';
+ 
+	if ( !empty($include) ) {
+		$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+		$attachments = array();
+		foreach ( $_attachments as $key => $val ) {
+			$attachments[$val->ID] = $_attachments[$key];
+		}
+	} elseif ( !empty($exclude) ) {
+		$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+	} else {
+		$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+	}
+ 
+	if ( empty($attachments) )
+		return '';
+ 
+	$gallery_style = $gallery_div = '';
+ 
+	if ( apply_filters( 'use_default_gallery_style', true ) )
+		$gallery_style = "<!-- see gallery_shortcode() in functions.php -->";
+	
+	$gallery_div = '<div id="carousel-'.$instance.'" class="carousel slide" data-ride="carousel" data-wrap="false">';
+	
+
+
+	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
+
+	$i = 0;
+	$output .= '<ol class="carousel-indicators">';
+	foreach ( $attachments as $id => $attachment ) {
+		$target = wp_get_attachment_image_src( $id, 'large' );
+		$thumb  = wp_get_attachment_image_src( $id, 'large' );
+		$legende ='';
+
+		$output .= '<li data-target="#carousel-'.$instance.'" data-slide-to="'.$i.'" class="'.( ($i == 0)? 'active': '') .'"></li>';
+
+		$i++;
+	}
+	$output .= '</ol>'."\n";	
+
+	$i = 0;
+	$output .= '<div class="carousel-inner">'."\n";
+	foreach ( $attachments as $id => $attachment ) {
+
+
+		$image = wp_get_attachment_image_src( $id, 'carousel' );
+		$legende ='';
+
+		//$legende = get_the_title($id);
+		//$legende = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+		$legende = addslashes(wptexturize($attachment->post_excerpt));
+
+	
+		//$link = wp_get_attachment_link($id, $imageSize , false, false);
+
+
+		$output .= '<div class="item'.( ($i == 0) ? ' active' : '' ).'">
+			<img src="'.$image[0].'" width="'.$image[1].'" height="'.$image[2].'" />
+			<!--<div class="container">
+				<div class="carousel-caption">
+					<div class="carousel-caption-container">
+						<h1><a href="#url">Titre</a></h1>
+						<p class="visible-lg visible-md hidden-sm hidden-xs"><a href="#url"><span class="fleche"></span> Lire la suite</a></p>
+					</div>
+				</div>
+			</div>-->
+		</div>';
+
+		/*if ( $captiontag && trim($attachment->post_excerpt) ) {
+			$output .= "
+				<p class='wp-caption-text homepage-gallery-caption'>
+				" . wptexturize($attachment->post_excerpt) . "
+				</p>";
+		}*/
+		//$output .= "</div>";
+
+		$i++;
+	}
+	$output .= '</div>'."\n";
+	$output .= '</div>'."\n";
+ 
+	return $output;
+}
 
 
 
