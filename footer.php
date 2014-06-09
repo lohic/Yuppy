@@ -37,7 +37,9 @@
 
 				wp_nav_menu( array( 
 					'theme_location'    => 'footer_menu',
-					'menu_class'	=> 'menu yuppy'					
+					'menu_class'		=> 'menu yuppy',
+					'fallback_cb'       => 'bottom_navwalker::fallback',
+					'walker'            => new bottom_navwalker()				
 				)) ;
 			}
 			?>
