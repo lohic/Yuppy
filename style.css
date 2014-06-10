@@ -180,9 +180,10 @@ a.hover{
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus{
+.navbar-default .navbar-nav>.active>a:focus,
+.current-menu-ancestor{
 	background-color: transparent;
-	border-bottom: solid 5px #2ed3f7; /* n'est plus pris en compte depuis un commit ?? */
+	border-bottom: solid 5px #2ed3f7; 
 	color: #2ed3f7;
 	min-height:50px;
 }
@@ -245,6 +246,38 @@ ol.breadcrumb li a:hover{
 	color:#000;
 	position:relative;
 	top:2px;
+}
+.dropdown-menu{
+	font-size: 1em;
+	background-color: rgba(0,0,0,0.8);
+	border: 0;
+	border-radius: 0px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	background-clip: padding-box;
+	border-top: solid 5px #2ed3f7; 
+}
+.dropdown-menu .divider{
+	background-color: #000;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	background-color: #000;
+	color: #2ed3f7;
+}
+.dropdown-menu>li>a{
+	font-family: "omnes-pro", sans-serif;
+	font-weight:200;
+	color: #FFF;
+}
+.dropdown-menu>li>a:hover{
+	background-color: inherit;
+	color: #2ed3f7;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus{
+	color: #2ed3f7;
+	text-decoration: underline;
+	outline: 0;
+	background-color: inherit;
 }
 
 /**
