@@ -702,6 +702,7 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 	border-color: #00ccff;
 	border-style: solid;
 	color: #ffffff;
+	border-top:10px solid #FFF;
 	cursor: pointer;
 	font-weight: 700;
 	-moz-border-radius: 0px;
