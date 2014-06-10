@@ -57,10 +57,7 @@
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-	<h1 class="page-header"><?php // ajout Sophie
-    foreach((get_the_category()) as $cat) { 
-    echo $cat->cat_name . ' '; 
-    } ?></h1>
+	<h1 class="page-header">Résultat de la recherche</h1>
 
 	<?php
 	$big = 999999999; // need an unlikely integer
