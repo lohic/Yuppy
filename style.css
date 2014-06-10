@@ -582,6 +582,8 @@ h1.page-header{
 }
 
 /* FIN PAGE ARCHIVE */
+
+/* PAGE  SINGLE */
 .post .postmetadata{
 	font-size:0.8em;
 	font-weight:700;
@@ -642,8 +644,90 @@ hr {
 	margin:5px;
 	height:0;
 }
-/* PAGE  SINGLE */
+
 /* FIN PAGE  SINGLE */
+
+/* FORMULAIRES */
+label{
+}
+input, button, select, textarea{
+}
+.frm-show-form{
+	max-width:450px;
+}
+.with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label{
+	font-family: "ff-dagny-web-pro", sans-serif;
+	font-size: 0.85em;
+	color: #444444;
+	font-weight: 700;
+	text-align: left;
+	margin: 10px 0 0;
+	padding: 0;
+	}
+.frm_required{
+	font-family: "ff-dagny-web-pro", sans-serif;
+	color: #2ed3f7;
+	font-weight:400;
+	}
+.with_frm_style input[type=text], .with_frm_style input[type=password], .with_frm_style input[type=email], .with_frm_style input[type=number], .with_frm_style input[type=url], .with_frm_style input[type=tel], .with_frm_style select, .with_frm_style textarea, .frm_form_fields_style, .with_frm_style .frm_scroll_box .frm_opt_container, .frm_form_fields_active_style, .frm_form_fields_error_style, .with_frm_style .chzn-container-multi .chzn-choices, .with_frm_style .chzn-container-single .chzn-single
+frm_submit, button, html input[type=button], input[type=reset], input[type=submit]{
+	font-family: "ff-dagny-web-pro", sans-serif;
+	color: #444444;
+	background-color: #f7f7f7;
+	border-color: #dddddd;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	width: 100%;
+	max-width: 100%;
+	font-size: 0.9em;
+	padding: 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.with_frm_style .frm_submit input[type=submit], .with_frm_style .frm_submit input[type=button], .frm_form_submit_style, .with_frm_style.frm_login_form input[type=submit],
+button, html input[type=button], input[type=reset], input[type=submit]{
+	width: auto;
+	font-family: "ff-dagny-web-pro", sans-serif;
+	font-size: 1em;
+	height: auto;
+	text-align: center;
+	background: #00ccff url();
+	border-width: 0px;
+	border-color: #00ccff;
+	border-style: solid;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: 700;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	text-shadow: none;
+	padding: 3px 8px;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ccff', endColorstr='#00ccff');
+	background: -webkit-gradient(linear, left top, left bottom, from(#00ccff), to(#00ccff));
+	background: -moz-linear-gradient(top, #00ccff, #00ccff);
+	-moz-box-shadow: 1px 2px 3px #ffffff;
+	-webkit-box-shadow: 1px 2px 3px #ffffff;
+	box-shadow: 1px 2px 3px #ffffff;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ffffff')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ffffff');
+}
+.with_frm_style input[type=text], .with_frm_style input[type=password], .with_frm_style input[type=email], .with_frm_style input[type=number], .with_frm_style input[type=url], .with_frm_style input[type=tel], .with_frm_style input[type=file], .with_frm_style select{
+	height: auto;
+	line-height: normal;
+}
+.with_frm_style .form-field input:focus, .with_frm_style select:focus, .with_frm_style textarea:focus, .with_frm_style .frm_focus_field input[type=text], .with_frm_style .frm_focus_field input[type=password], .with_frm_style .frm_focus_field input[type=email], .with_frm_style .frm_focus_field input[type=number], .with_frm_style .frm_focus_field input[type=url], .with_frm_style .frm_focus_field input[type=tel], .frm_form_fields_active_style, .with_frm_style .chzn-container-active .chzn-choices{
+	background-color: #ffffff;
+	border-color: #00ccff;
+}
+/* FIN  FORMULAIRES */
 
 /**
  * 
