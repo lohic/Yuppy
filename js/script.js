@@ -35,11 +35,23 @@ jQuery( document ).ready(function( $ ) {
 		var menuelem = $(this);
 		$('.breadcrumb a').each(function(){
 			if( $(this).attr('href') == menuelem.attr('href')){
-				menuelem.parent().addClass('active');
+				menuelem.parent()
+				.addClass('active')
+				.addClass('current-menu-item');
 			}
 		});
 	});
 
+	$('#menu-menu-principal-haut li ul a').each(function(){
+		var menuelem = $(this);
+		$('.breadcrumb a').each(function(){
+			if( $(this).attr('href') == menuelem.attr('href')){
+				menuelem.parent().parent().parent()
+				.addClass('active')
+				.addClass('current-menu-item');
+			}
+		});
+	})
 
 	/**
 	 * GESTION DES ROLLOVERS DE LA HOME
