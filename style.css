@@ -40,8 +40,13 @@ body{
 .footer{
 	background: #444;
 	padding-top:20px;
+	font-family: "omnes-pro", sans-serif;
+	color:#FFF;
+	font-weight:300;
+	font-size:0.85em;
+	margin-top:30px;
+	padding-bottom:30px;
 }
-
 .navigation{
 	padding-left:0;
 	padding-right:0;
@@ -390,14 +395,6 @@ h2.widgettitle{
 
 }
 
-.footer{
-	font-family: "omnes-pro", sans-serif;
-	color:#FFF;
-	font-weight:300;
-	font-size:0.85em;
-	margin-top:30px;
-	padding-bottom:30px;
-}
 .footer, .footer a{
 	color:#EEE;
 }
@@ -606,6 +603,14 @@ h1.page-header{
 .tags{
 	font-weight:500;
 	font-size:0.8em;
+}
+h4{
+	float:left;
+	width:350px;
+	font-size:1.8em;
+	font-style:italic;
+	font-weight:600;
+	margin:20px;
 }
 h5{
 	float:right;
