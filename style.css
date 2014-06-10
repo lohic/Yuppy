@@ -92,14 +92,14 @@ a.hover{
 	background: black;
 	border: none;
 	color: white;
-	margin-top:-3px;
+	margin-top:0;
+	padding: 0 10px;
 	}
 .btn-default:hover{
 	background: transparent;
 	border:none;
 	color:#2ed3f7;
 }
-
 
 /**
  * 
@@ -208,7 +208,6 @@ a.hover{
 
 #search-btn{
 	font-size:1.2em;
-	line-height:80%;
 }
 #search-btn:hover{
 	color:#2ed3f7;/* si on survole à côté ça grise par défaut + petit mouvement du champ texte */
@@ -225,7 +224,7 @@ a.hover{
 
 .form-group .btn{
 	border-radius: 0;
-	height:25px;
+	height:100%;
 }
 
 
@@ -743,7 +742,7 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ffffff');
 }
 .with_frm_style input[type=text], .with_frm_style input[type=password], .with_frm_style input[type=email], .with_frm_style input[type=number], .with_frm_style input[type=url], .with_frm_style input[type=tel], .with_frm_style input[type=file], .with_frm_style select{
-	height: auto;
+	height: 25px;
 	line-height: normal;
 }
 .with_frm_style .form-field input:focus, .with_frm_style select:focus, .with_frm_style textarea:focus, .with_frm_style .frm_focus_field input[type=text], .with_frm_style .frm_focus_field input[type=password], .with_frm_style .frm_focus_field input[type=email], .with_frm_style .frm_focus_field input[type=number], .with_frm_style .frm_focus_field input[type=url], .with_frm_style .frm_focus_field input[type=tel], .frm_form_fields_active_style, .with_frm_style .chzn-container-active .chzn-choices{
@@ -764,6 +763,10 @@ p.texte-contact+p.texte-contact{
 hr+p.texte-contact{
 	margin-top:20px;
 	}
+	
+.form-group{
+	max-width:450px;
+}
 /* FIN  FORMULAIRES */
 
 /**
