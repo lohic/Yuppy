@@ -9,8 +9,8 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 				<h1 class="page-header"><?php the_title(); ?></h1>
 
-				<p class="postmetadata"><?php the_category(', ') ?></p>
-				<p class="postmetadata"><?php the_date() ?><br/><span class="tags"><?php the_tags() ?></span></p>
+				<p class="postmetadata-single"><?php the_category(', ') ?></p>
+				<p class="postmetadata-single"><?php the_date() ?><br/><span class="tags"><?php the_tags() ?></span></p>
 
 				<div class="post_content">
 					<?php the_content(); ?>

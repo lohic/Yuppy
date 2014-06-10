@@ -496,7 +496,7 @@ h1.page-header{
 /* FIN PAGE  RECORDS */
 
 /* PAGE  ARCHIVE */
-.postmetadata{
+.postmetadata, .postmetadata-single{
 	font-size:0.7em;
 	margin:5px 0 0 0;
 	text-transform: uppercase;
@@ -547,12 +547,18 @@ h1.page-header{
 
 /* FIN PAGE ARCHIVE */
 .post .postmetadata{
+	font-size:0.8em;
+	font-weight:700;
+	padding-top:5px;
+}
+
+.post .postmetadata-single{
 	font-size:1em;
 	font-weight:700;
 	border-top:1px dotted #CCC;
 	padding-top:5px;
 }
-.post .postmetadata+.postmetadata{
+.post .postmetadata-single+.postmetadata-single{
 	border-top:0;
 	border-bottom:1px dotted #CCC;
 	margin:0 0 20px;
