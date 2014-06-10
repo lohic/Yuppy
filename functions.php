@@ -86,7 +86,7 @@ if( ! function_exists (my_register_post_types)) {
 				'show_in_nav_menus'	=> false,
 				'capability_type' 	=> 'page',
 				'rewrite' 			=> array("slug" => "records"),
-				'hierarchical' 		=> true,
+				'hierarchical' 		=> false,
 				'query_var' 		=> false,
 				'supports' 			=> array('title','editor','thumbnail'),
 				'menu_position' 	=> 20,

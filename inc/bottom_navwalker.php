@@ -37,7 +37,7 @@ class bottom_navwalker extends Walker_Nav_Menu {
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = 'col-lg-3 col-md-4 col-sm-6 col-xs-6';
+		$classes[] = 'col-lg-4 col-md-4 col-sm-6 col-xs-6';
 
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 
