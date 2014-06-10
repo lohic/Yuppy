@@ -92,7 +92,7 @@ if ( is_post_type_archive() ) {
 		<div>
 			<?php 
 
-				$discographie = p2p_type( 'discographie_to_records' )->get_connected(get_the_ID());
+				$discographie = p2p_type( 'discographie_to_record' )->get_connected(get_the_ID());
 
 
 				if ( $discographie->have_posts() ) {
