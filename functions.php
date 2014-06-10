@@ -554,4 +554,20 @@ function custom_gallery($attr) {
 
 
 
+// [aside] [/aside]
+/**
+ * [aside_shortcode description]
+ * @param  [type] $atts    [description]
+ * @param  [type] $content [description]
+ * @return [type]          [description]
+ */
+function aside_shortcode( $atts, $content = "" ) {
+	extract( shortcode_atts( array(
+		'align' => 'right',
+	), $atts ) );
+	return '<aside class="'.$align.'">' . $content . '</aside>';
+}
+add_shortcode( 'aside', 'aside_shortcode' );
+
+
 
