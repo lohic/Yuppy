@@ -54,7 +54,7 @@ Template Name: Records
 
 	<?php else : ?>
 		<h2>Aucun résultat</h2>
-		<p>Désolé, mais vous cherchez quelque chose qui ne se trouve pas ici .</p>
+		<p>Désolé, rien de tel ici.</p>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 		<?php edit_post_link('Modifier cette page', '<p>', '</p>'); ?>
 	<?php endif; ?>
