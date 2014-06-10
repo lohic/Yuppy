@@ -712,9 +712,9 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 	font-size: 1em;
 	height: auto;
 	text-align: center;
-	background: #00ccff url();
+	background: #2ed3f7 url();
 	border-width: 0px;
-	border-color: #00ccff;
+	border-color: #2ed3f7;
 	border-style: solid;
 	color: #ffffff;
 	margin-top:10px;
@@ -728,9 +728,9 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	-ms-box-sizing: content-box;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ccff', endColorstr='#00ccff');
-	background: -webkit-gradient(linear, left top, left bottom, from(#00ccff), to(#00ccff));
-	background: -moz-linear-gradient(top, #00ccff, #00ccff);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ed3f7', endColorstr='#2ed3f7');
+	background: -webkit-gradient(linear, left top, left bottom, from(#2ed3f7), to(#2ed3f7));
+	background: -moz-linear-gradient(top, #2ed3f7, #2ed3f7);
 	-moz-box-shadow: 0px #ffffff;
 	-webkit-box-shadow:  0px #ffffff;
 	box-shadow:  0px #ffffff;
@@ -743,7 +743,7 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 }
 .with_frm_style .form-field input:focus, .with_frm_style select:focus, .with_frm_style textarea:focus, .with_frm_style .frm_focus_field input[type=text], .with_frm_style .frm_focus_field input[type=password], .with_frm_style .frm_focus_field input[type=email], .with_frm_style .frm_focus_field input[type=number], .with_frm_style .frm_focus_field input[type=url], .with_frm_style .frm_focus_field input[type=tel], .frm_form_fields_active_style, .with_frm_style .chzn-container-active .chzn-choices{
 	background-color: #ffffff;
-	border-color: #00ccff;
+	border-color: #2ed3f7;
 }
 p.texte-contact{
 	font-family: "omnes-pro", sans-serif;
