@@ -4,7 +4,7 @@
 
 
 <div id="content" class="row">
-	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
@@ -23,9 +23,11 @@
 	<?php endif; ?>
 	</div>
     
-	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<p><?php echo do_shortcode('[mc4wp_form]');?></p>
-		<p><?php echo do_shortcode('[formidable id=2]');?></p>
+	<div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+		<div class="form_content">
+			<p><?php echo do_shortcode('[mc4wp_form]');?></p>
+			<p><?php echo do_shortcode('[formidable id=2]');?></p>
+		</div>
 	</div>
 </div>
 
