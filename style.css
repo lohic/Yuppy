@@ -1009,6 +1009,9 @@ hr+p.texte-contact{
 	.footer{
 		text-align:center;
 	}
+	.footer ul{
+		margin: 7px 0 0 0;
+	}
 	.footer ul.social{
 		width:100%;
 		margin-top:30px;
@@ -1044,6 +1047,10 @@ hr+p.texte-contact{
 	#nav_searchform{
 		display:none;
 	}
+	.lead{
+		font-size:1.5em;
+	}
+	
 	.carousel-indicators{
 		position: relative;
 		bottom: auto;
