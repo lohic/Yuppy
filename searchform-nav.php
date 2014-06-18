@@ -1,5 +1,5 @@
 <!-- SEARCHFORM.PHP -->
-<div class="navbar-nav col-lg-3 col-sm-3 navbar-right">
+<div id="nav_searchform" class="navbar-nav col-lg-3 col-sm-3 navbar-right">
 	<form class="navbar-form hidden-sm " role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 		<div class="form-group">
 			<div class="input-group">
