@@ -53,7 +53,7 @@
 				<li><a href="https://http://vimeo.com/yuppy" class="icon vimeo" target="_blank">vimeo</a></li>
 				<li><a href="https://soundcloud.com/beyuppy" class="icon soundcloud" target="_blank">soundcloud</a></li>
 			</ul>
-			<p>&#169; <?php print(date(Y)); ?> <a href="<?php  echo icl_get_home_url(); ?>">YUPPY</a> — All rights reserved.</p>
+			<p class="copyright">&#169; <?php print(date(Y)); ?> <a href="<?php  echo icl_get_home_url(); ?>">YUPPY</a> — All rights reserved.</p>
 		</div>
 	</div>
 </div><!-- fermeture div "container" -->
