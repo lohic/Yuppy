@@ -1044,11 +1044,21 @@ hr+p.texte-contact{
 	#search_button_link{
 		padding:11px 14px 0 0;
 	}
+	#search_button_link:focus, #search_button_link:active{
+		background:none;
+	}
+	#search_button_link a{
+			color:#FFF;
+	}
+	#search_button_link a:active, #search_button_link a:hover{
+		color:#2ed3f7;
+	}
+
 	#nav_searchform{
 		display:none;
 	}
 	.lead{
-		font-size:1.5em;
+		font-size:1.4em;
 	}
 	
 	.carousel-indicators{
