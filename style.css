@@ -1027,19 +1027,22 @@ hr+p.texte-contact{
 		padding-left: 0px;
 	}
 	.navbar-default {
-		min-height: 40px;
+		min-height: 45px;
 	}
 	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-		min-height: 40px;
+		min-height: 45px;
 	}
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
 	}	
 	.nav>li>a{
-		padding:10px 14px;
+		padding:5px 14px;
 	}
 	#search_button_link{
 		padding:11px 14px 0 0;
+	}
+	#nav_searchform{
+		display:none;
 	}
 	.carousel-indicators{
 		position: relative;
@@ -1138,10 +1141,10 @@ hr+p.texte-contact{
 	}
 
 	.navbar-default {
-		min-height: 40px;
+		min-height: 45px;
 	}
 	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-		min-height: 40px;
+		min-height: 45px;
 	}
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
