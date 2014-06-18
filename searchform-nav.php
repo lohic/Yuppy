@@ -10,6 +10,5 @@
 			</div>
 		</div>
 	</form>
-	<button type="submit" id="searchsubmit" class="btn btn-default hidden-xs hidden-md hidden-lg"><a href="<?php echo icl_get_home_url(); //bloginfo('url'); ?>search"><span id="search-btn" class="glyphicon glyphicon-search"></span></a></button>
 </div>
 <!-- end SEARCHFORM.PHP -->
