@@ -544,6 +544,16 @@ h1.page-header{
 	margin-top:-15px;
 }
 
+.post_content img{
+	max-width:100%;
+	height: auto;
+}
+
+.wp-caption{
+	max-width: 100%;
+}
+
+
 .post h2 a:hover{
  	color:#2ed3f7;
 	text-decoration:none;
@@ -889,6 +899,29 @@ hr+p.texte-contact{
 		font-size: 0.85em;
 	}
 
+	aside{
+		width:100%;
+		font-size:1.8em;
+		font-style:italic;
+		font-weight:600;
+		margin:20px 0;
+		font-family: "omnes-pro", sans-serif;
+		line-height: 1.1;
+	}
+
+	aside.right{
+		float:none;
+		margin:20px 0;
+	}
+	aside.left{
+		float:none;
+		margin:20px 0;
+	}
+
+	.footer ul.social{
+		width:100%;
+		text-align: right;
+	}
 }
 
 /* Small */
