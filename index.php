@@ -20,8 +20,7 @@
 		<?php posts_nav_link(' - ','page suivante','page pr&eacute;c&eacute;dente'); ?>
 	</div>
 	<?php else : ?>
-		<h2>Aucun résultat</h2>
-		<p>Désolé, rien de tel ici.</p>
+		<h2>Faire une recherche</h2>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 	<?php endif; ?>
 	</div>
