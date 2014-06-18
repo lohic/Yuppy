@@ -71,12 +71,12 @@
 		</div>
 		<div class="col-md-8 col-md-pull-4 col-sm-12">
 			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+				<div class="col-lg-4 col-md-5 col-sm-4 col-xs-12">
 					<h1>
 						<a href="<?php echo icl_get_home_url(); //bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/yuppy-transp.png" alt="YUPPY" width="217" height="107"/><span class="invisible"><?php bloginfo('name'); ?></span></a>
 					</h1>
 				</div>
-				<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
+				<div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
 					<p class="lead"><?php bloginfo('description'); ?></p>
 				</div>
 			</div>
