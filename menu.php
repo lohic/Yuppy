@@ -43,7 +43,7 @@
 			) ;
 		}
 		?>
-		<button id="search_button_link" class="btn btn-default hidden-xs hidden-md hidden-lg"><a href="<?php echo icl_get_home_url(); //bloginfo('url'); ?>search"><span id="search-btn" class="glyphicon glyphicon-search"></span></a></button>
+		<button id="search_button_link" class="btn btn-default hidden-xs hidden-md hidden-lg pull-right"><a href="<?php echo icl_get_home_url(); //bloginfo('url'); ?>search"><span id="search-btn" class="glyphicon glyphicon-search"></span></a></button>
 		<?php get_template_part('searchform','nav') ?>
 		</div>
 	<!--</div>-->
