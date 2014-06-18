@@ -101,8 +101,8 @@ if ( is_post_type_archive() ) {
 						$discographie->the_post();
 						?>
 						<div class='discographie'>
-							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
-							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+							<?php if ( has_post_thumbnail() ) {  ?><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a><?php } ?>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						</div>
 						<?php
 					}
