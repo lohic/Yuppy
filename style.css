@@ -805,14 +805,104 @@ hr+p.texte-contact{
 /* Extra Small */
 @media(max-width:767px){
 
-	#col-lang{
+#col-lang{
 		z-index:3000;
+	}
+	.header{
+		text-align:center
+	}
+	h1 img{
+		margin: 0;
 	}
 
 	.lead{
-		margin:0 0 20px 30px;
+		margin: 10px auto;
 	}
-	
+
+	.navbar-default .navbar-nav>li>a{
+		font-size:1.3em;
+	}	
+
+	.navbar-nav>li>a {
+		padding: 2px 0;
+	}
+
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+		min-height: 40px;
+}
+
+	.navbar-form, .navbar-form .form-group {
+		margin: 0;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-color: #000;
+	}
+	.navbar-default .navbar-form {
+		display: inline-block;
+	}
+	.navbar-toggle {
+		position: relative;
+		float: right;
+		margin-right: 5px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		border-radius:0;
+		background-color: transparent;
+		background-image: none;
+		border: 1px solid transparent;
+	}
+	.navbar-default .navbar-toggle {
+		border: none;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background: none;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar{
+		background-color:#2ed3f7;
+	}
+	.input-group {
+		position: relative;
+		display: table;
+		border-collapse: separate;
+		max-width: 230px;
+		margin-left:35px;
+	}
+
+.dropdown-menu{
+	font-size: 1em;
+	background-color: rgba(0,0,0,0.8);
+	border: 0;
+	border-radius: 0px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	background-clip: padding-box;
+}
+.navbar-default .navbar-nav .open .dropdown-menu .divider{
+	background-color: #333;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	background-color: #000;
+	color: #2ed3f7;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a{
+	font-family: "omnes-pro", sans-serif;
+	font-weight:200;
+	color: #FFF;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+	background-color: inherit;
+	color: #2ed3f7;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus{
+	color: #2ed3f7;
+	text-decoration: underline;
+	outline: 0;
+	background-color: inherit;
+}
+
 	.carousel-indicators{
 		position: relative;
 		bottom: auto;
@@ -861,7 +951,7 @@ hr+p.texte-contact{
 		bottom: 0;
 		right: 0;
 		bottom: 0;
-		margin:0 0 15px;
+		margin:10px;
 		padding: 10px;
 		background:rgba(46,211,247,0.8);
 		z-index: 10;
@@ -918,18 +1008,28 @@ hr+p.texte-contact{
 		margin:20px 0;
 	}
 
-	.footer ul.social{
+	.footer ul.social, .footer p.copyright{
 		width:100%;
-		text-align: right;
+		text-align: center;
+		margin-top:20px;
+		margin-bottom:0;
 	}
 }
 
 /* Small */
 @media(min-width:768px) and (max-width:991px){
+	.lead{
+		margin:85px 0 0 0;
+	}
+
 	.navbar-collapse{
 		padding-right: 0px;
 		padding-left: 0px;
 	}
+
+	.navbar-default .navbar-nav>li>a{
+		font-size:1.2em;
+	}	
 
 	.carousel-indicators{
 		position: relative;
@@ -985,11 +1085,8 @@ hr+p.texte-contact{
 		z-index: 10;
 		text-align: left;
 		text-shadow: none;
-		/*width:260px;*/
-		/*height: calc(100% - 30px);*/
 		height:auto;
 		font-size: 1em;
-		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
 	}
 	
 	.carousel-caption-container{
@@ -1091,7 +1188,6 @@ hr+p.texte-contact{
 		width:260px;
 		height: calc(100% - 30px);
 		font-size: 1em;
-		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
 	}
 	
 	.carousel-caption-container{
@@ -1194,7 +1290,6 @@ hr+p.texte-contact{
 		width:260px;
 		height: calc(100% - 30px);
 		font-size: 1em;
-		/*il faudrait que le texte se cale plutôt sur le bas du caption*/
 	}
 	
 	.carousel-caption-container{
