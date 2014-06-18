@@ -29,6 +29,26 @@
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
 
+	<?php if(have_rows('backgrounds', 'option')) : ?>
+	<style type="text/css" id="custom-background-image-css">
+	<?php 
+
+	$img_fond = array();
+
+	while( have_rows('backgrounds','option') ): the_row();
+		$img_fond[] = get_sub_field('image');
+	endwhile;
+	
+	$url = $img_fond[array_rand($img_fond)];
+
+	echo "body.custom-background{
+		background-image:url($url);
+	}";
+
+    ?>
+    </style>
+	<?php endif; ?>
+
 </head>
 <body class="custom-background">
 

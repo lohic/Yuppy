@@ -57,4 +57,50 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	register_field_group(array (
+		'id' => 'acf_images-de-fond',
+		'title' => 'Images de fond',
+		'fields' => array (
+			array (
+				'key' => 'field_53a1b4f3852d0',
+				'label' => 'Images de fond',
+				'name' => 'backgrounds',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_53a1b562852d1',
+						'label' => 'Image',
+						'name' => 'image',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'url',
+						'preview_size' => 'medium',
+						'library' => 'uploadedTo',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
