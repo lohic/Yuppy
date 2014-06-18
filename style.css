@@ -186,8 +186,7 @@ a.hover{
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus/*,
-.current-menu-ancestor*/{
+.navbar-default .navbar-nav>.active>a:focus{
 	background-color: transparent;
 	border-bottom: solid 5px #2ed3f7; 
 	color: #2ed3f7;
@@ -260,7 +259,6 @@ ol.breadcrumb li a:hover{
 	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	background-clip: padding-box;
-	/*border-top: solid 5px #2ed3f7;*/ 
 }
 .dropdown-menu .divider{
 	background-color: #000;
@@ -1023,21 +1021,25 @@ hr+p.texte-contact{
 
 /* Small */
 @media(min-width:768px) and (max-width:991px){
-	.lead{
-		margin:85px 0 0 0;
-	}
 
 	.navbar-collapse{
 		padding-right: 0px;
 		padding-left: 0px;
 	}
-
+	.navbar-default {
+		min-height: 40px;
+	}
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+		min-height: 40px;
+	}
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
 	}	
-
-	.form_content{
-		margin-right:15px;
+	.nav>li>a{
+		padding:10px 14px;
+	}
+	#search_button_link{
+		padding:11px 14px 0 0;
 	}
 	.carousel-indicators{
 		position: relative;
@@ -1135,9 +1137,19 @@ hr+p.texte-contact{
 		padding-left: 0px;
 	}
 
+	.navbar-default {
+		min-height: 40px;
+	}
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+		min-height: 40px;
+	}
 	.navbar-default .navbar-nav>li>a{
 		font-size:1.2em;
 	}	
+
+	.form_content{
+		margin-right:15px;
+	}
 
 	.carousel-indicators{
 		position: relative;
