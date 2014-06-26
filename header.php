@@ -33,16 +33,30 @@
 	<style type="text/css" id="custom-background-image-css">
 	<?php 
 
-	$img_fond = array();
+	$img_fond 		= array();
+	$bg_repeat	  	= array();
+	$bg_attachment	= array();
+	$bg_size	  	= array();
 
 	while( have_rows('backgrounds','option') ): the_row();
-		$img_fond[] = get_sub_field('image');
+		$img_fond[]		 = get_sub_field('image');
+		$bg_repeat[]	 = get_sub_field('repeat');
+		$bg_attachment[] = get_sub_field('attachment');
+		$bg_size[]		 = get_sub_field('size');
 	endwhile;
 	
-	$url = $img_fond[array_rand($img_fond)];
+
+	$refBG 		= array_rand($img_fond);
+	$url 		= $img_fond[$refBG];
+	$repeat 	= $bg_repeat[$refBG];
+	$attachment = $bg_attachment[$refBG];
+	$size		= $bg_size[$refBG];
 
 	echo "body.custom-background{
 		background-image:url($url);
+		background-repeat: $repeat;
+		background-attachment: $attachment;
+		background-size: $size;
 	}";
 
     ?>
