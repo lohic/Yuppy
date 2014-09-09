@@ -32,7 +32,7 @@ get_template_part('bootstrap','carousel')
 			if ( has_post_thumbnail() ) {
 			?>
 				<a href="<?php the_permalink();?>">
-				<?php the_post_thumbnail( 'home', array('class'=>'img-responsive vignette') ); ?>
+				<?php the_post_thumbnail( 'carousel', array('class'=>'img-responsive vignette') ); ?>
 				</a>
 			<?php } ?>
 			<h3><?php the_title()?> &nbsp;&nbsp;<span class="fleche"> </span><span><a href="<?php the_permalink();?>"> <?php _e("Lire l'interview");?></a></span></h3>

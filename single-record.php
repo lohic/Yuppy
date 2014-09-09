@@ -104,7 +104,10 @@ if ( is_post_type_archive() ) {
 						?>
 						<div class='discographie col-lg-12 col-md-12 col-sm-12 col-xs-6'>
 							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-							<?php if ( has_post_thumbnail() ) {  the_post_thumbnail('thumbnail'); } ?>
+							<?php if ( has_post_thumbnail() ) {  ?>
+							<a href="<?php the_permalink() ?>">
+							<?php the_post_thumbnail('thumbnail');?>
+							</a><?php } ?>
 							<?php the_excerpt(); ?>
 						</div>
 						<?php

@@ -28,7 +28,7 @@ Template Name: Records
 		<div class="records col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="row">
 				<?php
-				$custom_posts = new WP_Query('post_type=record&posts_per_page=-1&orderby=menu_order&order=ASC');
+				$custom_posts = new WP_Query('post_type=record&posts_per_page=-1&orderby=title&order=ASC');
 				if ($custom_posts->have_posts() ):
 				$i = 0;
 				?>

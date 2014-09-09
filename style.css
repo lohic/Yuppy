@@ -474,7 +474,11 @@ h1.page-single{
 }
 .discographie h3, .discographie h3 a{
 	color:#000;
-	font-weight:200;
+	font-weight:700;
+	margin-top: 0;
+}
+.discographie{
+	margin-bottom:2em;
 }
 .discographie h3 a:hover{
  	color:#2ed3f7;
@@ -644,11 +648,21 @@ aside img{
 }
 aside.right{
 	float:right;
-	margin:20px -40px 20px 20px;
+	margin:0px -40px 20px 20px;
 }
 aside.left{
 	float:left;
-	margin:20px 20px 20px 0;
+	margin:0px 20px 20px 0;
+}
+
+.alignleft{
+	float:left;
+	margin:0px 20px 20px 0;
+}
+
+.alignright{
+	float:right;
+	margin:20px -40px 20px 20px;
 }
 
 blockquote{
@@ -1044,21 +1058,11 @@ hr+p.texte-contact{
 	#search_button_link{
 		padding:11px 14px 0 0;
 	}
-	#search_button_link:focus, #search_button_link:active{
-		background:none;
-	}
-	#search_button_link a{
-			color:#FFF;
-	}
-	#search_button_link a:active, #search_button_link a:hover{
-		color:#2ed3f7;
-	}
-
 	#nav_searchform{
 		display:none;
 	}
 	.lead{
-		font-size:1.4em;
+		font-size:1.5em;
 	}
 	
 	.carousel-indicators{

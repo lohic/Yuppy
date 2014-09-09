@@ -16,7 +16,7 @@ if ( is_post_type_archive() ) {
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="row">
 			<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="page-header"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+				<h1 class="page-header"><?php the_title(); ?></h1>
 			</div>
 		</div>
 
@@ -68,7 +68,7 @@ if ( is_post_type_archive() ) {
 
 
 
-	<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
 		<div class="post" id="post-<?php the_ID(); ?>">
 				
@@ -87,7 +87,7 @@ if ( is_post_type_archive() ) {
 		</div>
 
 	</div>
-	<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 		<div>
 			<?php 
@@ -100,10 +100,11 @@ if ( is_post_type_archive() ) {
 					while ( $discographie->have_posts() ) {
 						$discographie->the_post();
 						?>
-						<div class='discographie'>
+						<h3>Artiste : <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<!--<div class='discographie'>
 							<?php if ( has_post_thumbnail() ) {  ?><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a><?php } ?>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						</div>
+						</div>-->
 						<?php
 					}
 			
