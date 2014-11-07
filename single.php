@@ -14,6 +14,61 @@
 
 				<div class="post_content">
 					<?php the_content(); ?>
+
+
+					<?php
+
+						$isAlbum = false;
+						$isLabel = false;  
+
+						$terms = get_the_terms( $post->ID, 'album' );
+
+												
+						if ( $terms && ! is_wp_error( $terms ) ) :
+
+							echo '<p>';
+
+							$albums_links = array();
+
+							foreach ( $terms as $term ) {
+								$albums_links[] = $term->name;
+
+								$isAlbum = true;
+							}
+												
+							$albums = join( ", ", $albums_links );
+
+						 	echo 'Album : ' . $albums ; 
+
+						endif; 
+
+
+						$terms = get_the_terms( $post->ID, 'label' );
+												
+						if ( $terms && ! is_wp_error( $terms ) ) : 
+
+							echo $isAlbum==true ? '<br/>' : '<p>';
+
+							$labels_links = array();
+
+							foreach ( $terms as $term ) {
+								$labels_links[] = $term->name;
+
+								$isLabel = true;
+							}
+												
+							$labels = join( ", ", $labels_links );
+
+						 	echo 'Label : ' . $labels . '</p>';
+
+						endif;
+
+						if($isAlbum && !$isLabel){
+							echo '</p>';
+						}
+
+					?>
+
 				</div>
 		</div>
 

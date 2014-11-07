@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Records
+Template Name: Artists
 */
 ?>
 
 <?php get_header(); ?>
 
-<!-- P-RECORDS.PHP -->
+<!-- P-ARTISTS.PHP -->
 
 
 <div id="content" class="row">
@@ -28,7 +28,7 @@ Template Name: Records
 		<div class="records col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="row">
 				<?php
-				$custom_posts = new WP_Query('post_type=record&posts_per_page=-1&orderby=title&order=ASC');
+				$custom_posts = new WP_Query('post_type=artist&posts_per_page=-1&orderby=title&order=ASC');
 				if ($custom_posts->have_posts() ):
 				$i = 0;
 				?>
@@ -61,6 +61,6 @@ Template Name: Records
 
 </div>
 
-<!-- end P-RECORDS.PHP -->
+<!-- end P-ARTISTS.PHP -->
 
 <?php get_footer(); ?>

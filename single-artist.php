@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- SINGLE-RECORDS.PHP -->
+<!-- SINGLE-ARTIST.PHP -->
 
 <div id="content" class="row">
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
@@ -92,7 +92,7 @@ if ( is_post_type_archive() ) {
 		<div class="row">
 			<?php 
 
-				$discographie = p2p_type( 'discographie_to_record' )->get_connected(get_the_ID());
+				$discographie = p2p_type( 'discographie_to_artist' )->get_connected(get_the_ID());
 
 
 				if ( $discographie->have_posts() ) {
@@ -131,6 +131,6 @@ if ( is_post_type_archive() ) {
 <?php endif; ?>
 </div>
 
-<!-- end SINGLE-RECORDS.PHP -->
+<!-- end SINGLE-ARTIST.PHP -->
 
 <?php get_footer(); ?>

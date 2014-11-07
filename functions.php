@@ -57,8 +57,8 @@ add_theme_support( 'custom-background', $background_presets  );
 if( ! function_exists (my_connection_types)) {
 	function my_connection_types() {
 		p2p_register_connection_type( array(
-			'name' 			=> 'discographie_to_record',
-			'from' 			=> 'record',
+			'name' 			=> 'discographie_to_artist',
+			'from' 			=> 'artist',
 			'to' 			=> 'discographie',
 			'reciprocal' 	=> true,
 			//'title' 		=> 'Albums',
@@ -74,10 +74,10 @@ if( ! function_exists (my_register_post_types)) {
 
 
 		register_post_type(
-			'record',
+			'artist',
 			array(
-				'label' 			=> __('Records'),
-				'singular_label'  	=> __('Record'),
+				'label' 			=> __('Artistes'),
+				'singular_label'  	=> __('Artiste'),
 				'public' 			=> true,
 				'show_ui' 			=> true,
 				//'show_in_menu' 	=> false,
@@ -85,7 +85,7 @@ if( ! function_exists (my_register_post_types)) {
 				'menu_icon'			=> 'dashicons-universal-access-alt',
 				'show_in_nav_menus'	=> false,
 				'capability_type' 	=> 'page',
-				'rewrite' 			=> array("slug" => "records"),
+				'rewrite' 			=> array("slug" => "artists"),
 				'hierarchical' 		=> false,
 				'query_var' 		=> false,
 				'supports' 			=> array('title','editor','thumbnail'),

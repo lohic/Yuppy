@@ -77,6 +77,10 @@ if ( is_post_type_archive() ) {
 				</p>-->
 				
 				<div class="post_content">
+					<p><?php the_excerpt(); ?></p>
+					<?php if( has_post_thumbnail() ){ ?>
+					<p><?php the_post_thumbnail('thumbnail');?></p>
+					<?php } ?>
 					<?php the_content(); ?>
 				</div>
 		</div>
@@ -92,7 +96,7 @@ if ( is_post_type_archive() ) {
 		<div>
 			<?php 
 
-				$discographie = p2p_type( 'discographie_to_record' )->get_connected(get_the_ID());
+				$discographie = p2p_type( 'discographie_to_artist' )->get_connected(get_the_ID());
 
 
 				if ( $discographie->have_posts() ) {
